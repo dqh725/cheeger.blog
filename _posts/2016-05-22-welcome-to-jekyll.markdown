@@ -1,15 +1,59 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-05-22 17:40:17 +1000
-categories: jekyll update
+title:  "Rules of markdown"
+category: programming
+
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Inline \`code\` has \`back-ticks around\` it.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Inline `code` has `back-ticks around` it.
 
-Jekyll also offers powerful support for code snippets:
+\`\`\`javascript
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+\`\`\`python
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+ 
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+
+\> you can \*put\* \*\*Markdown\*\* into a blockquote. 
+
+> you can *put* **Markdown** into a blockquote. 
+
+
+Three or more...
+
+\-\-\-
+
+---
+
+Hyphens
+
+\*\*\*
+
+***
+
+Asterisks
+
+\_\_\_
+
+___
+
+Underscores
+
+\{ % hightlight ruby %\}
+
+\{ % endhightlight %\}
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
@@ -18,8 +62,13 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+\[blog.cheeger.com\]\[url\]
+
+[blog.cheeger.com][url]
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+[url]: http://blog.cheeger.com/
