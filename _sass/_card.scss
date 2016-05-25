@@ -2,6 +2,7 @@
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .row:before,
@@ -50,8 +51,12 @@
     transition: box-shadow .25s;
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    width:100%;
     .card-image{
-
+      background-position:center;
+      height:300px;
+      width:auto;
+      background-size: cover;
     }
 
     .card-content{
