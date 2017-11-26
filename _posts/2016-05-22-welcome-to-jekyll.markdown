@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Rules of markdown"
-category: programming
-
+tags: programming
 ---
+
 Inline \`code\` has \`back-ticks around\` it.
 
 Inline `code` has `back-ticks around` it.

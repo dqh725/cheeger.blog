@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  OCserv on Ubuntu 16.04 for Cisco AnyConnect Client
-tags: tech
+tags: server
 ---
 
 # OCserv_with_anyconnect

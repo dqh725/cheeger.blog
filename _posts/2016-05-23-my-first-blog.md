@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setup static blog via Github and jekyll
+title: My First post
 tags: general
 ---
 
