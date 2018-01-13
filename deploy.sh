@@ -8,7 +8,7 @@ touch _site/.nojekyll
 
 echo ".sass-cache\n.jekyll-metadata" > .gitignore
 git add _site && git commit -m "Initial _site subtree commit"
-git reset --soft
+git reset HEAD~
 
 echo "_site\n.sass-cache\n.jekyll-metadata" > .gitignore
 
