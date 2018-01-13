@@ -7,13 +7,9 @@
 
 # Site settings
 #
-plugins: [jekyll-paginate]
+plugins: ["jekyll-paginate", "jekyll-multiple-languages-plugin"]
 
-
-title: Alba's blog
 email: dqh725@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  LeBlanc’s law: Later equals never.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.cheeger.com" # the base hostname & protocol for your site
 github_username:  albahoo
@@ -23,3 +19,5 @@ markdown: kramdown
 
 # enable pagination for posts
 paginate: 5
+languages: ["cn", "en"]
+exclude_from_localizations: ["javascript", "images", "css", "_posts"]

@@ -22,7 +22,7 @@ once it's created, it will expose these methods:
 - reject(value)
 - promose()
 
-`promise()` returns an object that is very similar to the `Deferred` object except that it only has ``then(), done(), and fail()` methods and does not have `resolve() or reject()`.
+`promise()` returns an object that is very similar to the `Deferred` object except that it only has `then(), done(), and fail()` methods and does not have `resolve() or reject()`.
 
 
 

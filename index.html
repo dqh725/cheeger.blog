@@ -4,13 +4,13 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Alba's Tribe</h1>
+  <h1 class="page-heading">{% t category.title %}</h1>
   <ul>
-    <li><a href="tags/general.html" class="btn btn-default">General</a></li>
-    <li><a href="tags/develop.html" class="btn btn-default">Develop Notes</a></li>
-    <li><a href="tags/server.html" class="btn btn-default">Server Notes</a></li>
+    <li><a href="tags/general.html" class="btn btn-default">{% t category.c1 %}</a></li>
+    <li><a href="tags/develop.html" class="btn btn-default">{% t category.c2 %}</a></li>
+    <li><a href="tags/server.html" class="btn btn-default">{% t category.c3 %}</a></li>
   </ul>
 
-  <h2 class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></h2>
+  <h2 class="rss-subscribe">{% t subscribe %} <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></h2>
 
 </div>
