@@ -16,7 +16,7 @@ description: > # this means to ignore newlines until "baseurl:"
   LeBlanc’s law: Later equals never.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.cheeger.com" # the base hostname & protocol for your site
-github_username:  dqh725
+github_username:  albahoo
 
 # Build settings
 markdown: kramdown

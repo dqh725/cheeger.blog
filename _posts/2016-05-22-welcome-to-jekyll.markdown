@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Rules of markdown"
-tags: programming
+title:  "rules of markdown"
+tags: general
 ---
 
 Inline \`code\` has \`back-ticks around\` it.

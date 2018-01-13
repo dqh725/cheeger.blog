@@ -1,78 +1,81 @@
 ---
 layout: page
-title: About the Author
+title: About Me
 permalink: /about/
 ---
 
-# Alba Hoo (Wenyue Hu)
+# Alba Hoo, Wenyue Hu, 胡文跃
 
-[huw.alba@gmail.com][email-to]
+Email: [huw.alba@gmail.com][email-to]
 
-[North Melourne, 3051, VIC, Australia][address-url]
+来自: [浙江，温州，乐清][address-url]
 
 {% highlight ruby %}
-general: Ruby, Java, Python, MatLab, C
-mobile: Android, PhoneGap(Cordova)
-website: Ruby on Rails, JavaScript, Coffee-Script, Sass, CSS3
-frontend_framework: Angular, jQuery, Bootstrap
-dabatase: AWS, MySQL, noSQL, Postgres
+General: Ruby, Node, Java, Python, C, MatLab
+Server: Fullstack (Rails + Postgresql), Node
+Frontend: Ember, Angular, npm, bower
+Dabatase: SQL, noSQL, Postgres
+Mobile: Android, Cordova
 {% endhighlight %}
 
-
-
 **Generic Skills**
+---
 
-1. Familiar with unit test tools, like Mocha/js and Rspec/Ruby
-2. HTTP(S), TCP/IP and UDP protocols
-3. Machine learning, IR systems, Big data analysis.
+1. Familiar with TDD, like Rspec/Ruby.
+2. Has two years experience of Ruby on rails web development, IoT and AWS related.
+3. General knowlege of linux (Ubuntu) commands, for server managerment.
+4. Big fan of *Ansible* for shell management.
+5. Familiar with web protocols, e.g. HTTP(S), TCP/IP and UDP and Shadowsocks protocols.
+6. Machine learning, IR(Information Retrieval) systems, Big data analysis.
 
 **Education**
+---
 
-Master of Information Technology, *University of Melbourne*, Australia 􏰂 
+_2013.6 - 2015.6_ Master of Information Technology, *University of Melbourne*, Australia 􏰂
 
-Studied full-time masters with specialization in computing
+_2008.6 - 2012.6_ Bachelar of Material Science & Engineering, *Zhejiang University*, China
 
-**My Projects**
 
-**Full-stack ruby on rails developer**, [Romey][romey-url], Melbourne
+**Professional Experience**
+---
 
-- Worked on cloud database, Parse.com cloud services, noSQL
-- Enabled SMS, email and instance notification on mobile, gem sucker_puncher
-- Worked with coffeescript, javascript, jQuery, Sass, bootstrap
-- Used Mocha and Chai as js and coffeescript unit test
+_2016.6 - current_ **Sofeware Developer**, [Vivi International][vivi-url], Melbourne
+
+- Developed the company website from scratch, vivi.io.
+- Maintaining the Administrator Website, api.vivi.io.
+- Integrated with ZOHO CRM and Hubspot CRM by api.
+- Integrated with Xero API for generate customer invoice.
+- Mobile App features developemnt and enhancement (Cross platform with cordova + ember).
+
+_2015.3 - 2016.3_ **Full-stack ruby on rails developer**, [Romey][romey-url], Melbourne
+
+- Rails server with external cloud noSQL database
+- Enabled SMS, email and instance notification on mobile
 - Integrated with PayPal SDK and Stripe API as payment methods
-- Used codeclimate fot analysing code quality
-􏰂- Used GitHub for version control
 
-**Front-end developer**, [PetHomeStay][pethomestay-url], Melbourne
+_2015.9 - 2015.11_ **Front-end developer**, [PetHomeStay][pethomestay-url], Melbourne
 
 - Used additional tools for working with team, such as pivotal tracker, codeship and slack
 - Used haml as views of Ruby on Rails
 
-**Phonegap (Cordova) developer**, *Todo list*, Melbourne 
-
-- Require.js+Angular.js+Cordova.js
-- Deployed to platforms: browser, IOS and android
-- Database:Cordova-sqlite-storage(https://github.com/litehelpers/Cordova-sqlite-storage), a web SQL liked dplugin
+**Personal Projects**
+---
 
 **Blogs search engine algorithm research**, using Python
 
-- Developed a TF-IDF model system for fast key word searching like Google
-- Explored various indexing models and compared their confusion matrix
+- Developed a TF-IDF model system for fast key word searching like Google/Baidu
 - Investigated query language patterns used by various IR engines
 
 **Synchronization System, using JAVA**, using JAVA
 
 - Designed a client-server architecture for file synchronization software
-- Used a P2P architecture for video synchronization
-- Implemented a java project for each architecture using distributed programming
-methodology
-- Used json, webcam capture API and http requests
+- Used a P2P architecture for video synchronization distributed system
 
->Connected to [Alba's LinkedIn][linkedIn]
+> Connect to [Alba's LinkedIn][linkedIn]
 
-[address-url]: https://www.google.com.au/maps/place/North+Melbourne+VIC/@-37.7962614,144.9346079,14.43z/data=!4m5!3m4!1s0x6ad65d283acb6965:0x5045675218ce760!8m2!3d-37.8029679!4d144.9501126
+[address-url]:/2018/01/08/温州人为什么精于经商致富.html
 [email-to]: mailto:huw.alba@gmail.com
-[linkedIn]: https://au.linkedin.com/in/alba-hoo-2b0a43104
+[linkedIn]: https://au.linkedin.com/in/alba-hoo
 [romey-url]:https://www.romey.co
 [pethomestay-url]:https://www.pethomestay.com.au
+[vivi-url]:https://www.vivi.io
