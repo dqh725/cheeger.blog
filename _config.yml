@@ -11,7 +11,7 @@ plugins: ["jekyll-paginate", "jekyll-multiple-languages-plugin"]
 
 email: dqh725@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.cheeger.com" # the base hostname & protocol for your site
+url: "http://cheeger.com" # the base hostname & protocol for your site
 github_username:  albahoo
 
 # Build settings

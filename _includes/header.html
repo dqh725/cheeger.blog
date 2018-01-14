@@ -9,6 +9,7 @@
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{% t about_me %}</a>
           {% endif %}
         {% endfor %}
+        <a class="page-link" href="{% if site.lang == 'cn' %} /en {% else %} / {% endif %}">{% if site.lang == 'en' %} 中文 {% else %} English {% endif %}</a>
       </div>
     </nav>
 

@@ -39,7 +39,7 @@ _2008.6 - 2012.6_ Bachelar of Material Science & Engineering, *Zhejiang Universi
 **Professional Experience**
 ---
 
-_2016.6 - current_ **Sofeware Developer**, [Vivi International][vivi-url], Melbourne
+_2016.6 - current_ **Software Developer**, [Vivi International][vivi-url], Melbourne
 
 - Developed the company website from scratch, vivi.io.
 - Maintaining the Administrator Website, api.vivi.io.
