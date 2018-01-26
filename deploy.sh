@@ -16,3 +16,10 @@ echo "_site\n.sass-cache\n.jekyll-metadata" > .gitignore
 git push origin --delete gh-pages
 
 git subtree push --prefix _site origin gh-pages
+
+echo 'Deploy to github'
+
+echo 'Start depoly _site to ali cloud...'
+
+rm _site/*.sh
+scp -r ./_site/* root@47.74.183.6:/srv/www/cheeger.com
