@@ -1,0 +1,11 @@
+<li>
+  <span class="post-meta">{{ include.post.date | date: "%b %-d, %Y" }}</span>
+
+  {% for tag in include.post.tags %}
+    <span class="tag-item">{{ tag }}</span>
+  {% endfor %}
+
+  <h2>
+    <a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a>
+  </h2>
+</li>

@@ -2,10 +2,12 @@ title: Alba's Blog
 about_me: About Me
 category:
   title: Alba's Tribe
+  c0: All
   c1: General
   c2: Code
   c3: Script
   c4: Linux
+  c5: database
 subscribe: subscribe
 mail: mail
 quote: "LeBlanc’s law: Later equals never."

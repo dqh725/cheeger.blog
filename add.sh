@@ -17,6 +17,15 @@ category: general
 tags: tag1
 ---
 
+# introduction
+content
+
+# para1
+content
+
+# para2
+content
+
 EOT
 
 vim "./_posts/$NOW-$TITLE.md"
