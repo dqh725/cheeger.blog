@@ -16,3 +16,15 @@ Start of post:
     title: Blogging Like a Hacker
     tags: genetal | programming | server
     ---
+
+# script
+
+There are two scripts in this projects
+
+- `add.sh` to add new post
+
+    sh add.sh 'title'
+
+- `deploy.sh` to deploy to both Github Page / My own server
+
+    sh deploy.sh
