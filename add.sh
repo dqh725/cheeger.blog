@@ -13,7 +13,8 @@ cat <<EOT >> "./_posts/$NOW-$TITLE.md"
 ---
 layout: post
 title:  "$1"
-tags: general
+category: general
+tags: tag1
 ---
 
 EOT

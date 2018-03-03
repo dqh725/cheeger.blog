@@ -133,6 +133,14 @@
     color: $grey-color;
 }
 
+.tag-item {
+    border: 1px solid green;
+    border-radius: 2px;
+    background: lightgreen;
+    color: purple;
+    padding: 2px;
+}
+
 .post-link {
     display: block;
     font-size: 24px;

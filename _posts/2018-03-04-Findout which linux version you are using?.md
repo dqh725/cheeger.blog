@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Find out which linux version you are using?"
-tags: 'linux'
+category: 'linux'
+tags: linux
 ---
 
 # Method #1: /etc/*-release file

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Set Serverspeeder with shadowsocks
-tags: server
+category: server
+tags: shadowsocks VPN
 ---
 
 This is only for ubuntu16.04 ubuntu14.04

@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Understand $.Deferred and Promise"
-tags: programming
+category: programming
+tags: jQuery code
 ---
 
 In short, `$.Deferred` and `Promise` are asynchronous value.

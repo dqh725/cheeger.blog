@@ -14,7 +14,7 @@ Start of post:
     ---
     layout: post
     title: Blogging Like a Hacker
-    tags: genetal | programming | server
+    category: genetal | programming | server
     ---
 
 # script
