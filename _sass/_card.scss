@@ -14,7 +14,7 @@
   clear: both;
 }
 
-.col-xs-12, .col-sm-5, .col-sm-7{
+.col-xs-12, .col-xs-6, .col-sm-5, .col-sm-7{
   float:left;
   min-height: 1px;
   padding-right: 15px;
@@ -24,6 +24,12 @@
   vertical-align:top;
 }
 
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-6 {
+  width: 50%;
+}
 
 @media (min-width: 768px) {
   .col-sm-7{
@@ -71,6 +77,6 @@
   border-radius: 0 0 2px 2px;
 
   .card-desc-title{
-    margin-top:40px; 
+    margin-top:40px;
   }
 }
