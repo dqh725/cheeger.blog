@@ -65,7 +65,7 @@ _2015.9 - 2015.11_ **Front-end developer**, [PetHomeStay][pethomestay-url], Melb
 - Designed a client-server architecture for file synchronization software
 - Used a P2P architecture for video synchronization distributed system
 
-> Connect to [Alba's LinkedIn][linkedIn]
+Connect to [Alba's LinkedIn][linkedIn]
 
 [address-url]:/general/2018/01/08/温州人为什么精于经商致富.html
 [email-to]: mailto:huw.alba@gmail.com

@@ -2,12 +2,9 @@ title: 阿尔巴的博客
 about_me: 我的简历
 category:
   title: 阿尔巴部落
-  c0: 全部帖子
-  c1: 其他
-  c2: 代码
-  c3: 脚本
-  c4: Linux
-  c5: 数据库
+  c0: 全部贴
+  c1: 通用贴
+  c2: 程序猴
 subscribe: 订阅
 mail: 电邮
 quote: "勒布朗法则：推延等于拒绝"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "S3 Log Analysis"
-category: programming
+category: develop
 tags: aws S3 goaccess log_analysis
 ---
 

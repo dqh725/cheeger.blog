@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Find out which linux version you are using?"
-category: 'linux'
+category: develop
 tags: linux
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set Serverspeeder with shadowsocks
-category: server
+category: develop
 tags: shadowsocks VPN
 ---
 
