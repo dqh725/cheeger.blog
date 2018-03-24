@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Create materialized view for multiple databases for rails"
 category: develop
 tags: rails MaterializedView PostgreSQL dblink

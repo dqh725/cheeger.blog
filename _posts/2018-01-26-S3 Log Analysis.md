@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "S3 Log Analysis"
 category: develop
 tags: aws S3 goaccess LogAnalysis

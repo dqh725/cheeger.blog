@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Image processing with AWS lambda & S3 buckets"
 category: develop
 tags: AWS lambda S3
