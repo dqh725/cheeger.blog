@@ -4,11 +4,18 @@ layout: default
 
 <div class="home">
   <ul class="nav">
-    <li class="nav-item"><a href="category/develop.html" class="btn btn-default">{% t category.c2 %}</a></li>
-    <li class="nav-item"><a href="category/general.html" class="btn btn-default">{% t category.c1 %}</a></li>
+    <li class="nav-item">
+      <span data-icon="1" class="icon"></span>
+      <a href="category/develop.html" class="btn btn-default">{% t category.c2 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="1" class="icon"></span>
+      <a href="category/general.html" class="btn btn-default">{% t category.c1 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="1" class="icon"></span>
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{% t subscribe %}</a>
+    </li>
   </ul>
   {% include posts.html category='all' %}
-
-  <h2 class="rss-subscribe">{% t subscribe %} <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></h2>
-
 </div>
