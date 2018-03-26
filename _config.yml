@@ -11,7 +11,7 @@ plugins: ["jekyll-paginate", "jekyll-multiple-languages-plugin"]
 
 email: dqh725@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://cheeger.com" # the base hostname & protocol for your site
+url: "https://cheeger.com" # the base hostname & protocol for your site
 github_username:  albahoo
 
 # Build settings
@@ -21,3 +21,4 @@ markdown: kramdown
 paginate: 5
 languages: ["cn", "en"]
 exclude_from_localizations: ["javascript", "images", "css", "_posts"]
+
