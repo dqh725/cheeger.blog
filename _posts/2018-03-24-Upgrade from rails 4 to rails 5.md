@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title:  "Upgrade from rails 4 to rails 5"
+icon: D
 category: develop
 tags: rubyonrails
 ---

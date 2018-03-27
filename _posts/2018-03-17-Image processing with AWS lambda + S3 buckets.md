@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title:  "Image processing with AWS lambda & S3 buckets"
+icon: c
 category: develop
 tags: AWS lambda S3
 ---

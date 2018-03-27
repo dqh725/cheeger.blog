@@ -1,0 +1,18 @@
+  <ul class="nav">
+    <li class="nav-item">
+      <span data-icon="1" class="icon"></span>
+      <a href="/index.html" class="btn btn-default">{% t category.c0 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="1" class="icon"></span>
+      <a href="/category/develop.html" class="btn btn-default">{% t category.c2 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="1" class="icon"></span>
+      <a href="/category/general.html" class="btn btn-default">{% t category.c1 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="r" class="icon"></span>
+      <a href='{{ "/feed.xml" | prepend: site.baseurl }}'>{% t subscribe %}</a>
+    </li>
+  </ul>

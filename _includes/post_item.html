@@ -6,6 +6,9 @@
   {% endfor %}
 
   <h2>
-    <a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a>
+    <a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}">
+      {% if include.post.icon %} <span class="icon" data-icon="{{ include.post.icon }}"></span> {% endif %}
+      {{ include.post.title }}
+    </a>
   </h2>
 </li>
