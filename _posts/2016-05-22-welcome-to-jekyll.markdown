@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "rules of markdown"
+title:  "Markdown Syntax"
 category: general
 tags: syntax markdown
 ---

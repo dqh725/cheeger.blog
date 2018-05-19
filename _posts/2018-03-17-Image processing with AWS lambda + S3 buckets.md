@@ -8,17 +8,17 @@ tags: AWS lambda S3
 ---
 
 # Use AWS lambda for image processing
-This is the toturial of how to file processing after uploading to s3 in aws lambda with node 4.
+This is the toturial of how to do media file processing after uploaded to s3 by AWS lambda with node.
 
 # How it works
-1. Create a AWS Lambda,
+1. Create an AWS Lambda,
 ![create a new lambda]({{"/images/posts/lambda/new_lambda.png"}})
-2. Create a IAM role with the buildin AWS policy, in my case, I name the role `lambda_s3_writer`
+2. Create an IAM role with the buildin AWS policy, in my case, I named the role `lambda_s3_writer`
 ![with the default policy]({{"/images/posts/lambda/aws_policy.png"}})
-N.B. the default policy include `read/write` access to all S3 buckets, and permissions to write logs to cloudwatch.
-3. Setup a lambda trigger event, mine is just set when an object is uploaded into s3 bucket
+in the above image, the aws managed policy include `read/write` access to all S3 buckets and the permissions to write logs to cloudwatch.
+3. Add a lambda trigger, mine is just set when an object is uploaded into s3 bucket.
 ![lambda trigger]({{"/images/posts/lambda/trigger.png"}})
-4. There are 3 ways upload function code, uploading the whole code package into a zip file, and upload to one S3 bucket, then copy the S3 object link into the lambda configuration.
+4. There are 3 ways upload function code, uploading the whole code package into a zip file, and upload to one S4 bucket, then copy the S3 object link into the lambda configuration.
 5. You can also set `Environment variables` in lambda as well.
 
 # Functional Code

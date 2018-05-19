@@ -12,7 +12,7 @@ Sepuencial asynchronous process will easily getting into callback hell, inorder 
 # $.Deferred
 
 This is a jQuery implementation introduced in 1.5
-## creation
+## Creation
 `var deferred = jQuery.Deferred();` or
 `var deferred = $.Deferred();`
 once it's created, it will expose these methods:
@@ -26,5 +26,25 @@ once it's created, it will expose these methods:
 
 `promise()` returns an object that is very similar to the `Deferred` object except that it only has `then(), done(), and fail()` methods and does not have `resolve() or reject()`.
 
+## Usage
+```javascript
+function lazy_work(){
+  return new Promise((resolve, reject) => {
+    setTimeout(function(){
+      resolve('my job is done');
+    }, 3000);
+  });
+}
 
+function lazy_work2(){
+  var deferred = $.Deferred();
+  setTimeout(function(){
+    deferred.resolve('my job is done');
+  }, 3000);
+  return deferred;
+}
+lazy_work().then(data => {console.log(data)})
+lazy_work2().then(data => {console.log(data)})
+# => show 'my job is done' after 3 seconds.
+```
 

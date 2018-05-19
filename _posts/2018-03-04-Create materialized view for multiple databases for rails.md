@@ -8,9 +8,9 @@ tags: rails MaterializedView PostgreSQL dblink
 ---
 
 # Introduction
-When rails app works with multiple databases, the database performance could be an issue due to the join features is blocked across databases. Even though dblink provides a way for the database to connect an external database, the latency is high if join via dblink. A better solution is to create a materialized view via dblink and save it.
+When rails app works with multiple databases, the database performance could be an issue due to the join features is blocked across databases. Even though dblink provides a way for the database to connect an external database, the latency is high if join via dblink. A better solution is to create a materialized view via dblink and cache the data.
 
-The background: One of my rails app, beside from the default primary database, it has another PG database created by the gem [secondbase][secondbase], the second DB contains all the usage stats, which is not important but query intensive, therefore it causing a lot of performance issue, when query stats data.
+**The background**: One of my rails app, beside the default primary database, it has another PG database handled by the gem [secondbase][secondbase], the second DB contains all the usage stats, which is not important but query intensive, therefore it causing a lot of performance issue, when query stats data.
 
 If there is only one database, and you want to use views to cache SQL Query, the gem [scenic][scenic] does a good job.
 

@@ -58,14 +58,16 @@ Use `git diff` to carefully merge your old configurations with the new rails con
 # A list of breaking changes:
 1. Gem `quiet_assets`, `test_after_commit` are included in Rails 5, should delete in Gemfile.
 2. Gem `factory_girl_rails` is renamed to `factory_bot_rails`.
-3. Enum type, `where(field: string)` no longer work, changed to `where(field: fields[field])`
+3. Enum type, **where(field: string)** no longer work, changed to **where(field: fields[field]) or where(field: :symbol)**
 4. Enum finally support `_prefix` and `_suffix`
-5. `nothing is deprecated`, so change all `render nothing: true, status: 401` to `head :unauthorized`, change for 2xx ~ 5xx.
+5. **render nothing: true, status: 401** is deprecated, change to **head :unauthorized**.
 6. `belongs_to` default to `optional: false`, so association is required, it's said you can configure the setting
 ```
 Rails.application.config.active_record.belongs_to_required_by_default = false
 ```
 however, according to [the known issue][issue-url], it cannot be turned off when **activerecord-session_store** is used.
 7. `config.active_job.queue_adapter = :async` by default which uses concurrent-ruby. But this is not recommended for production environments.
+8. Finally can use hash#dig, `{}.dig(:firstkey, :secondkey)`
+9. `ActiveRelation#uniq` is removed in 5.1, will have to use `ActiveRelation#distinct`
 
 [issue-url]: https://github.com/rails/activerecord-session_store/issues/116
