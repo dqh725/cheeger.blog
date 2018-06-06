@@ -12,12 +12,12 @@ This is the toturial of how to do media file processing after uploaded to s3 by 
 
 # How it works
 1. Create an AWS Lambda,
-![create a new lambda]({{"/images/posts/lambda/new_lambda.png"}})
+![create a new lambda]({{"/lambda/new_lambda.png" | prepend: site.image_root}})
 2. Create an IAM role with the buildin AWS policy, in my case, I named the role `lambda_s3_writer`
-![with the default policy]({{"/images/posts/lambda/aws_policy.png"}})
+![with the default policy]({{"/lambda/aws_policy.png" | prepend: site.image_root}})
 in the above image, the aws managed policy include `read/write` access to all S3 buckets and the permissions to write logs to cloudwatch.
 3. Add a lambda trigger, mine is just set when an object is uploaded into s3 bucket.
-![lambda trigger]({{"/images/posts/lambda/trigger.png"}})
+![lambda trigger]({{"/lambda/trigger.png" | prepend: site.image_root}})
 4. There are 3 ways upload function code, uploading the whole code package into a zip file, and upload to one S4 bucket, then copy the S3 object link into the lambda configuration.
 5. You can also set `Environment variables` in lambda as well.
 

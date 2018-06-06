@@ -6,4 +6,4 @@ tags: cryptography, public-private
 ---
 
 # Introduction
-![Cryptography]({{"/images/posts/cryptography/keys.png"}})
+![Cryptography]({{"/cryptography/keys.png" | prepend: site.image_root}})

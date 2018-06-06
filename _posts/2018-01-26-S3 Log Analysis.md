@@ -38,7 +38,7 @@ Then, configure the s3cmd
 G
     s3cmd --configure
 
-![Provide the default information in the prompt]({{"/images/posts/log_analyse/1.png"}})
+![Provide the default information in the prompt]({{"/log_analyse/1.png" | prepend: site.image_root }})
 The most basic configuration is the `Access Key`, `Secret Key` and `Default Region`, you can leave all the others with s3cmd's default setting.
 
 In order for s3cmd access the logs, you need to have an AWS IAM Roles pre-defined, which have read access to the destination bucket (can read the log file). From that IAM Roles, you can generate the credential for API access, which is the `access key` and `secret key`.
@@ -99,7 +99,7 @@ And to generate a html/csv report
     goaccess * -o report.html
 
 My terninal view looks like this
-![My Goaccess View]({{"/images/posts/log_analyse/2.png"}})
+![My Goaccess View]({{"/log_analyse/2.png" | prepend: site.image_root}})
 
 [goaccess-github]: https://github.com/allinurl/goaccess
 [goaccess-home]: https://goaccess.io
