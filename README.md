@@ -28,3 +28,17 @@ There are two scripts in this projects
 - `deploy.sh` to deploy to both Github Page / My own server
 
     sh deploy.sh
+
+# get all tags
+```
+---
+layout: null
+---
+{
+    "tags": [
+        {% for tag in site.tags %}
+        "{{ tag | first }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+}
+```

@@ -3,7 +3,7 @@
     <h4>胡文跃, 1991.07</h4>
   </div>
   <div class="col-xs-6">
-    <img src="/images/alba.png" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/>
+    <img src="/assets/images/alba.png" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/>
   </div>
 </div>
 

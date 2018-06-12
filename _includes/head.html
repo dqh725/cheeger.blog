@@ -6,6 +6,13 @@
   <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{% t title %}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.title | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="image" content="https://cheeger.com/assets/images/favicon.png">
+
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="Cheeger - Alba's Blog">
+  <meta itemprop="description" content="{% if page.excerpt %}{{ page.title | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta itemprop="image" content="https://cheeger.com/assets/images/favicon.png">
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

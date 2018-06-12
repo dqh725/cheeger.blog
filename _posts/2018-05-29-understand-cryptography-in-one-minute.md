@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "Understand Cryptography in One Minute"
+title:  "一分钟理解网络密码系统"
 category: develop
+icon: k
+comments: true
 tags: cryptography, public-private
 ---
 
