@@ -21,8 +21,10 @@ markdown: kramdown
 # enable pagination for posts
 paginate: 5
 languages: ["cn", "en"]
-exclude_from_localizations: ["javascript", "images", "css", "_posts"]
+exclude_from_localizations: [ "_posts", "node_modules" ]
 
 # set the sass fold path
 sass:
   sass_dir: assets/_sass
+
+exclude: ["node_modules", "js-src","package.json", "package-lock.json", "add.sh", "deploy.sh", "webpack.config.js"]
