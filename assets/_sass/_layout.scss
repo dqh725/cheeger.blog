@@ -126,6 +126,8 @@
   > li {
     margin-bottom: $spacing-unit;
   }
+
+  li h2 span { display: inline-block; }
 }
 
 .post-meta {
@@ -146,6 +148,18 @@
   font-size: 24px;
 }
 
+.word-count {
+  font-size: 12px;
+  background: #E1ECF4;
+  border-radius: 2px;
+  padding: .4em .5em;
+}
+
+#search-input {
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 10px;
+}
 
 
 /**

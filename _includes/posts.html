@@ -1,5 +1,7 @@
   <ul class="post-list">
     {% include panel.html %}
+    <input type="text" id="search-input" placeholder="Search blog posts..">
+    <ul id="results-container"></ul>
     {% if include.category == 'all' %}
       {% for post in site.posts %}
         {% include post_item.html post=post %}

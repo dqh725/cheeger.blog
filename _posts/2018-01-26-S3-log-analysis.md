@@ -4,7 +4,7 @@ comments: true
 title:  "S3 Log Analysis"
 icon: c
 category: develop
-tags: aws S3 goaccess LogAnalysis
+tags: aws S3 goaccess log
 ---
 
 Recently, I have been working on analysing AWS S3 Bucket usage, in order to produce a report of uploading and downloading of s3 objects. The process is quite tricky, here I will show you how to do it.
