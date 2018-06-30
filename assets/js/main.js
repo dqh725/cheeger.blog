@@ -1,4 +1,4 @@
-require('../node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js');
+require('../../node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js');
 var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),

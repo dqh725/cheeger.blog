@@ -2,20 +2,19 @@
 
   <div class="wrapper">
     <a class="site-title" href="{{ site.baseurl }}/">
-      <span data-icon="N" class="icon"></span>
-      {% t title %}
+      <img src="/assets/images/favicon.png" alt="{{t title}}">
     </a>
     <nav class="site-nav">
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
+          <span data-icon="j" class="icon"></span>
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
-            <span data-icon="j" class="icon"></span>
             {% t about_me %}</a>
           {% endif %}
         {% endfor %}
+        <span data-icon="G" class="icon"></span>
         <a class="page-link" href="{% if site.lang == 'cn' %} /en {% else %} / {% endif %}">
-          <span data-icon="G" class="icon"></span>
           {% if site.lang == 'en' %} 中文 {% else %} English {% endif %}</a>
       </div>
     </nav>

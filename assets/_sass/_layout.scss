@@ -22,6 +22,9 @@
   &:visited {
     color: $grey-color-dark;
   }
+  img {
+    height: 60px;
+  }
 }
 
 .site-nav {
@@ -138,8 +141,8 @@
 .tag-item {
   font-size: 12px;
   border-radius: 2px;
-  background: #E1ECF4;
-  color: #39739d ;
+  background: $grey-color-light;
+  color: $grey-color-dark;
   padding: .4em .5em;
 }
 
@@ -150,7 +153,7 @@
 
 .word-count {
   font-size: 12px;
-  background: #E1ECF4;
+  color: $grey-color-dark;
   border-radius: 2px;
   padding: .4em .5em;
 }

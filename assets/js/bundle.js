@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js-src/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./js-src/main.js":
-/*!************************!*\
-  !*** ./js-src/main.js ***!
-  \************************/
+/***/ "./assets/js/main.js":
+/*!***************************!*\
+  !*** ./assets/js/main.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ../node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js */ \"./node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js\");\nvar sjs = SimpleJekyllSearch({\n  searchInput: document.getElementById('search-input'),\n  resultsContainer: document.getElementById('results-container'),\n  searchResultTemplate: `\n  <li>\n  <span class=\"post-meta\">{date}</span>\n  <a href=\"{url}\">{title}</a>\n  <span class=\"tag-item\">{tags} </span>\n  </li>`,\n  json: '/search.json'\n});\n\n//# sourceURL=webpack:///./js-src/main.js?");
+eval("__webpack_require__(/*! ../../node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js */ \"./node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js\");\nvar sjs = SimpleJekyllSearch({\n  searchInput: document.getElementById('search-input'),\n  resultsContainer: document.getElementById('results-container'),\n  searchResultTemplate: `\n  <li>\n  <span class=\"post-meta\">{date}</span>\n  <a href=\"{url}\">{title}</a>\n  <span class=\"tag-item\">{tags} </span>\n  </li>`,\n  json: '/search.json'\n});\n\n//# sourceURL=webpack:///./assets/js/main.js?");
 
 /***/ }),
 

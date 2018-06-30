@@ -12,28 +12,28 @@
 
 来自: [中国浙江省乐清市][address-url]
 
-`技能树`
+`技能`
 {% highlight ruby %}
-基础: Ruby, NodeJS, Java, Python, C, MatLab
-服务器: Rails + PostgreSQL, Node + ExpressJS
-前端: Ember, Angular, npm, bower
-数据库: SQL, noSQL
-开发APP: Android, Cordova, Electron
+语言: Ruby, NodeJS, Java, Python, C, MatLab
+前端: React, Ember, webpack, npm
+后端: Rails, ExpressJS
+数据库: PostgreSQL, NoSQL
+应用开发: Android, Cordova, Electron
 {% endhighlight %}
 
 ---
 ---
 <br>
-#### **我能做什么**
+#### **关于我**
 
-1. 具有三年ruby on rails全栈开发经验, 了解并能熟练运用TDD开发;
+1. 具有三年ruby on rails全栈开发经验, 能熟练运用rspec做TDD开发;
 2. 了解并且熟悉数据库的搭建以及优化，熟悉PostgreSQL;
 3. 了解AWS常用服务以及Azure常用服务;
-4. 具有一定的物联开发经验;
-5. 对linux系统以及服务器搭建具有一定了解, 熟悉常用命令;
+4. 具有物联开发经验;
+5. 熟悉linux系统以及服务器搭建;
 6. 熟悉脚本管理工具*Ansible*;
 7. 熟悉通用的网络协议, 包括 HTTP(S), TCP/IP，UDP 以及 Shadowsocks;
-8. 掌握理论性知识: Machine learning, IR(Information Retrieval) systems, Big data analysis.
+8. 理论性知识: Machine learning, IR(Information Retrieval) systems, Big data analysis.
 
 ---
 ---
@@ -49,22 +49,27 @@ _2008.6 - 2012.6_ 工科学士, 材料科学与工程, *浙江大学*, 中国
 <br>
 #### **工作经验**
 
-_2017.9 - 至今_ **远程开发**, [Vivi International][vivi-url], 中国
-- 基于nodeJS开发微服务端做图片处理
-- 熟悉AWS的服务，包括S3，Lambda，EC2的搭建和开发
-- HTTP日志报告分析
+_2017.9 - 至今_ **远程工作**, [Vivi International][vivi-url], 中国
+
+- BAU
+- 增加了ZOOM每天视频例会和工作汇报
 
 _2016.6 - 2017.9_ **软件工程师**, [Vivi International][vivi-url], 墨尔本
 
-- 开发和维护公司门户网站以及控制平台(ruby on rails)
+组合云端，硬件设备以及APP的可交互的屏幕实时分享系统，目前侧重与教学和公司会议。
+- 基于node和AWS云端的图片处理微信匿名服务器
+- 熟悉AWS的服务，包括S3，Lambda，EC2的搭建和开发
+- 开发和维护公司门户网站以及物联网管理网站(ruby on rails)
 - 集成第三方平台，包括客户管理系统（CRM）Hubspot， ZOHO，在线电子账单系统XERO
-- 通过Electron，cordova，emberJS 实现跨平台客户端的网页开发, 包括windows, linux, mac, andriod, IOS, chromebook
+- 通过Electron，cordova，emberJS网页内核APP开发, 包括windows, linux, mac, andriod, IOS, chromebook
+- 基于socketio的局域网物联
 - 熟悉jira，o365，slack等办公软件，熟悉git以及GitHub
 - 熟悉ELK日志系统的搭建和维护
 
 _2015.3 - 2016.3_ **网站开发工程师**, [Romey][romey-url], 墨尔本
 
-- 基于云端noSQL数据库，开发ROR网站
+基于个人或者组织摄影出景需求的摄影师与模特在线预约系统
+- 开发和维护RoR后台管理网站
 - 集成SMS，邮箱，通知推送
 - 在线支付PayPal SDK / Stripe API
 
@@ -82,12 +87,12 @@ _2015.9 - 2015.11_ **前端工程师**, [PetHomeStay][pethomestay-url], 墨尔�
 - Developed a TF-IDF model system for fast key word searching like Google/Baidu
 - Investigated query language patterns used by various IR engines
 
-**UDP/TCP文件视频同步系统**, JAVA
+**文件视频同步系统**, JAVA
 
 - Designed a client-server architecture for file synchronization software
 - Used a P2P architecture for video synchronization distributed system
 
- 我的LinkedIn账号 [Alba][linkedIn]
+ 我的LinkedIn账号 [[Alba][linkedIn]]
 
 [address-url]:/general/2018/01/08/温州人为什么精于经商致富.html
 [email-to]: mailto:huw.alba@gmail.com

@@ -10,6 +10,6 @@
     <span><a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}">
       {{ include.post.title }}
       </a></span>
-    <span class="word-count"> wc:{{ include.post.content | number_of_words }}</span>
+    <span class="word-count"> (W:{{ include.post.content | number_of_words }})</span>
   </h2>
 </li>
