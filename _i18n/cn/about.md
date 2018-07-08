@@ -3,7 +3,10 @@
     <h4>胡文跃, 1991.07</h4>
   </div>
   <div class="col-xs-6">
-    <img src="/assets/images/alba.png" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/>
+    <div class="slick">
+      <div><img src="/assets/images/alba.png" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/></div>
+      <div><img src="/assets/images/tech.jpg" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/></div>
+    </div>
   </div>
 </div>
 
@@ -17,7 +20,7 @@
 语言: Ruby, NodeJS, Java, Python, C, MatLab
 前端: React, Ember, webpack, npm
 后端: Rails, ExpressJS
-数据库: PostgreSQL, NoSQL
+数据库: SQL(PostgreSQL), NoSQL(Parse-Server)
 应用开发: Android, Cordova, Electron
 {% endhighlight %}
 
@@ -51,8 +54,8 @@ _2008.6 - 2012.6_ 工科学士, 材料科学与工程, *浙江大学*, 中国
 
 _2017.9 - 至今_ **远程工作**, [Vivi International][vivi-url], 中国
 
-- BAU
-- 增加了ZOOM每天视频例会和工作汇报
+- Business As Usual
+- 每日ZOOM视频例会和工作汇报
 
 _2016.6 - 2017.9_ **软件工程师**, [Vivi International][vivi-url], 墨尔本
 
@@ -62,7 +65,7 @@ _2016.6 - 2017.9_ **软件工程师**, [Vivi International][vivi-url], 墨尔本
 - 开发和维护公司门户网站以及物联网管理网站(ruby on rails)
 - 集成第三方平台，包括客户管理系统（CRM）Hubspot， ZOHO，在线电子账单系统XERO
 - 通过Electron，cordova，emberJS网页内核APP开发, 包括windows, linux, mac, andriod, IOS, chromebook
-- 基于socketio的局域网物联
+- 基于socketio和websocket的物联网系统
 - 熟悉jira，o365，slack等办公软件，熟悉git以及GitHub
 - 熟悉ELK日志系统的搭建和维护
 

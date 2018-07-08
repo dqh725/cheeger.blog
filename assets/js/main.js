@@ -1,4 +1,6 @@
 require('../../node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js');
+require('../../node_modules/slick-carousel/slick/slick.min.js');
+
 var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
@@ -10,3 +12,5 @@ var sjs = SimpleJekyllSearch({
   </li>`,
   json: '/search.json'
 })
+
+$('.slick').slick();

@@ -3,3 +3,11 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+
+# js build file
+assets/js/bundle.js
+
+# vim swap files
+*.swp
+*.swo
+*.swn
