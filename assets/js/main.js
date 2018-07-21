@@ -1,5 +1,6 @@
-require('../../node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js');
-require('../../node_modules/slick-carousel/slick/slick.min.js');
+import 'simple-jekyll-search';
+import $ from 'jquery';
+import 'slick-carousel';
 
 var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
@@ -11,6 +12,12 @@ var sjs = SimpleJekyllSearch({
   <span class="tag-item">{tags} </span>
   </li>`,
   json: '/search.json'
-})
+});
 
-$('.slick').slick();
+$(document).ready(function() {
+  $('.slick').slick({
+    infinite: true,
+    dots: true,
+    arrows: false
+  });
+});

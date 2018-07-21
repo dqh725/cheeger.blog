@@ -2,14 +2,15 @@
   <div class="col-xs-6">
     <h4>胡文跃, 1991.07</h4>
   </div>
-  <div class="col-xs-6">
+  <div class="col-xs-6" style="height: 0">
     <div class="slick">
-      <div><img src="/assets/images/alba.png" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/></div>
-      <div><img src="/assets/images/tech.jpg" width="100" style="float: right; padding-right: 50px; margin-top: -50px;"/></div>
+      <div><img src="/assets/images/alba.png" width="100" style="margin:auto"/></div>
+      <div><img src="/assets/images/alba2.jpg" width="100" style="margin:auto"/></div>
+      <div><img src="/assets/images/alba3.jpg" width="100" style="margin:auto"/></div>
+      <div><img src="/assets/images/alba4.jpg" width="150" style="margin:auto"/></div>
     </div>
   </div>
 </div>
-
 
 邮箱: [huw.alba@gmail.com][email-to]
 
