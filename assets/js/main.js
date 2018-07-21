@@ -1,6 +1,9 @@
 import 'simple-jekyll-search';
 import $ from 'jquery';
 import 'slick-carousel';
+import 'particles.js';
+import conf from './particles.js';
+console.log(conf);
 
 var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
@@ -20,4 +23,6 @@ $(document).ready(function() {
     dots: true,
     arrows: false
   });
+
+  particlesJS('particles-js', conf);
 });
