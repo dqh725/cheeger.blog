@@ -1,6 +1,7 @@
 #!/bin/sh
 # rebuild
 rm -rf _site
+webpack
 jekyll build
 
 # delete remote-pages

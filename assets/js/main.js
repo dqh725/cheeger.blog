@@ -3,7 +3,6 @@ import $ from 'jquery';
 import 'slick-carousel';
 import 'particles.js';
 import conf from './particles.js';
-console.log(conf);
 
 var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
