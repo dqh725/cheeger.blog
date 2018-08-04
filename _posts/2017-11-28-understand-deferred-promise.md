@@ -3,6 +3,7 @@ layout: post
 title:  "Understand $.Deferred and Promise"
 category: develop
 icon: B
+lang: en
 tags: jQuery
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "一分钟理解网络密码系统"
+title:  "一分钟理解网络信息传输的加密方式"
 category: develop
 icon: k
+lang: cn
 comments: true
 tags: cryptography public-private
 ---

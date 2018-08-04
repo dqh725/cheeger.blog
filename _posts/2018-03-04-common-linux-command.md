@@ -3,6 +3,7 @@ layout: post
 title:  "find/sed"
 category: linux
 icon: B
+lang: en
 tags: linux
 ---
 

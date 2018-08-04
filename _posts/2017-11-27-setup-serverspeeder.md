@@ -2,6 +2,7 @@
 layout: post
 title: Set Serverspeeder with shadowsocks
 icon: U
+lang: en
 category: develop
 tags: shadowsocks VPN
 ---

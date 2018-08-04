@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Implementat your own Backend-as-a-service via parse-server"
+title:  "Setup your own Baas with node and parse-server"
 category: develop
 icon: w
+lang: en
 tags: parse-server parse-dashboard pm2 noSQL
 ---
 

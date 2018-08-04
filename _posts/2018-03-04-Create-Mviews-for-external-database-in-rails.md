@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "Create materialized view for multiple databases for rails"
+title:  "Create materialized view for partitioned databases"
 icon: w
+lang: en
 category: develop
 tags: rails MaterializedView PostgreSQL dblink
 ---

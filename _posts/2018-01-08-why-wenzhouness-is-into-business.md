@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "温州人为什么精于经商致富"
+title:  "【转帖】温州人为什么精于经商致富"
 icon: z
 category: general
+lang: cn
 tags: 知乎
 ---
 

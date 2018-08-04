@@ -3,6 +3,8 @@ layout: post
 title:  "Markdown Syntax"
 category: general
 tags: syntax markdown
+lang: en
+
 ---
 
 Inline \`code\` has \`back-ticks around\` it.

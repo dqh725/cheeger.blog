@@ -3,12 +3,17 @@
     <input type="text" id="search-input" placeholder="搜索">
     <ul id="results-container"></ul>
     {% if include.category == 'all' %}
+      {% assign filtered = site.posts | where: "lang", site.lang %}
+      {% for post in filtered %}
+        {% include post_item.html post=post %}
+      {% endfor %}
+    {% elsif include.category == 'all_lang' %}
       {% for post in site.posts %}
         {% include post_item.html post=post %}
       {% endfor %}
     {% else %}
       {% for post in site.posts %}
-        {% if post.category == include.category and post.disabled != 'disabled' %}
+        {% if post.category == include.category and post.lang == site.lang %}
           {% include post_item.html post=post %}
         {% endif %}
       {% endfor %}

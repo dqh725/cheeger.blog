@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Manual for basic ubuntu"
+title:  "Systemctl brief"
 category: linux
 icon: u
+lang: en
 comments: true
 tags: ubuntu
 ---

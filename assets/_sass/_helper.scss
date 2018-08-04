@@ -9,6 +9,9 @@
 .icon {
   color: $grey-color-dark;
   vertical-align: middle;
+  &.highlight {
+    color: firebrick;
+  }
 }
 
 #particles-js {

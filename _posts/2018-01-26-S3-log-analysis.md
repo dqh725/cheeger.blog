@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "S3 Log Analysis"
+title:  "HTTP Log Analysis for aws s3 usage"
 icon: c
+lang: en
 category: develop
 tags: aws S3 goaccess log
 ---

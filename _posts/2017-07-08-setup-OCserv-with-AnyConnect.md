@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
-title:  OCserv on Ubuntu 16.04 for Cisco AnyConnect Client
+title:  "OCserv: a VPN server setup for Cisco AnyConnect"
 icon: v
+lang: en
 category: develop
 tags: VPN cisco
 ---
