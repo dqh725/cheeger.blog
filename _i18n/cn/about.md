@@ -7,7 +7,6 @@
       <div><img src="/assets/images/alba.png" width="100" style="margin:auto"/></div>
       <div><img src="/assets/images/alba2.jpg" width="100" style="margin:auto"/></div>
       <div><img src="/assets/images/alba3.jpg" width="100" style="margin:auto"/></div>
-      <div><img src="/assets/images/alba4.jpg" width="150" style="margin:auto"/></div>
     </div>
   </div>
 </div>
