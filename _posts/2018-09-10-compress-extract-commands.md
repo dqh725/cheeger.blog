@@ -2,6 +2,7 @@
 layout: post
 title:  "Compress/Extract commands"
 lang: en
+icon: B
 category: linux
 tags: tar, zip, ux
 comments: true

@@ -2,6 +2,7 @@
 layout: post
 title:  "PostgreSQL 事务隔离"
 lang: cn
+icon: y
 category: develop
 tags: postgresql, isolation
 comments: true
