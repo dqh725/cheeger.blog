@@ -4,12 +4,12 @@ rm -rf _site
 webpack
 jekyll build
 
-# delete remote-pages
-# git push origin --delete gh-pages
+echo 'Compressing...'
+tar -czvf archive.tar.gz ./_site --exclude=./_site/deploy*
 
-# git subtree push --prefix _site origin gh-pages
+echo 'Start transfer compressed file to ali cloud...'
+scp -r ./archive.tar.gz root@47.74.183.6:~
 
-echo 'Start depoly _site to ali cloud...'
-
-rm _site/*.sh
-scp -r ./_site/* root@47.74.183.6:/srv/www/cheeger.com
+echo 'Unpack tar file in the remote server...'
+ssh alia "tar -xzvf archive.tar.gz -C /srv/www --transform 's/_site/cheeger.com/';rm archive.tar.gz;exit"
+rm archive.tar.gz
