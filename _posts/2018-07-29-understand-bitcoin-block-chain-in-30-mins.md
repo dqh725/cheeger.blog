@@ -3,6 +3,7 @@ layout: post
 title:  "一个视频通俗理解比特币/区块链原理"
 category: general
 lang: cn
+icon: f
 tags: bitcoin, blockchain
 ---
 
