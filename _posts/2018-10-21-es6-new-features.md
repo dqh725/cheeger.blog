@@ -4,7 +4,7 @@ title:  "ES6/ES7 New Features"
 lang: en
 category: develop
 tags: ES6
-icon: b
+icon: 2
 comments: false
 ---
 

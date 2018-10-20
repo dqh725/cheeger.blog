@@ -2,7 +2,7 @@
 layout: post
 title:  "Enable Two-factor Authentication for Rails"
 lang: en
-icon: k
+icon: b
 category: developer
 tag: rails, two-factor-authentication
 comments: true
