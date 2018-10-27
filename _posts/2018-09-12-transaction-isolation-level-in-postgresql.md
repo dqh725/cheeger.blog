@@ -45,14 +45,17 @@ Multiple-version-concurrency-control
     - has index on column A lock related rows only
     - has no index on column A lock the whole table
 
-# postgreSQL
+# PostgreSQL
 For postgreSQL, transactions in SQL are isolated with Read Committed level.
 Two select commands can return different data in the same transaction.
 
 in psql:
-    BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;
-    BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;
-    BEGIN; -- the default is READ COMMITED
-    BEGIN TRANSACTION ISOLATION LEVEL READ UNCOMMITED;
 
+    BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+    BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
+    BEGIN; -- the default is READ COMMITED
+
+    BEGIN TRANSACTION ISOLATION LEVEL READ UNCOMMITED;
 

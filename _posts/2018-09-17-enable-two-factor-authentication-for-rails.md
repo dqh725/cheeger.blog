@@ -154,7 +154,7 @@ end
 ```
 
 # Explanation
-The idea is call a befor_action of `authenticate_with_two_factor` if the user.two_factor_enabled?, if validated, then it call the `:create` method in session controller.
+The idea is to call a befor_action of `authenticate_with_two_factor` if the user.two_factor_enabled?, if validated, then it call the `:create` method in session controller.
 
 # QRcode
 Generate a QRcode in the UI for the user to integrate the 2fa with a 3rd mobile application, and provide the code to actually enable this feature.
