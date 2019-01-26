@@ -11,7 +11,6 @@ var sjs = SimpleJekyllSearch({
   <li>
   <span class="post-meta">{date}</span>
   <a href="{url}">{title}</a>
-  <span class="tag-item">{tags} </span>
   </li>`,
   json: '/search.json'
 });

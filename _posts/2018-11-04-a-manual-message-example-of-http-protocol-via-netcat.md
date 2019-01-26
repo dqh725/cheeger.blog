@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Manual Message Example of HTTP Protocol via Netcat"
+title:  "Basic HTTP Protocol working theory via Netcat"
 lang: en
 category: develop
 icon: C
@@ -9,20 +9,22 @@ comments: true
 ---
 
 # Introduction
-Everyone web developer knows HTTP protocol more or less, the full name is **Hypertext Transfer Protocol**.
+**Hypertext Transfer Protocol**(HTTP) is an application protocol for distributed, collaborative, hypermedia iformation systems, http is the foundation of data communication for the WWW.
 
-In my words, it's a set of message formats pre-defined for any client talking to any server. While the lastest version is HTTP/2 which is released in 2015, HTTP/1.1 is still the most widely supported one.
+Development of HTTP was initiated by Tim Berners-Lee at CERN in 1989, and a later version HTTP/2 was standardized in 2015 and is now supported by major web[(wiki)][http-wiki-url].
 
-In this article, I would like to get my hand dirty to start a client and a server and passing message around by following the HTTP/1.1's rule, so everyone will have a concrete idea of how HTTP protocol may looks like.
+In my words, it is a set of message formats standard pre-defined for 2 parties(client-server). The lastest version is HTTP/2 which is released in 2015, but HTTP/1.1 is still the most widely supported one.
+
+In this article, I would start a client and a server by the tool **netcat** and passing message around them by following the HTTP/1.1, and hopefully shows you a rough idea about how HTTP protocol looks like in the real world.
 
 # Start a connection:
 
     server > netcat -lp 1234 # l: listen, p: port
-    browser> netcat localhost 1234 # connect to address
+    browser> netcat localhost 1234 # connect to the address
 
-shell1 and 2 are connected via TCP, so if you send any message in browser will be received in server, and same the opposite.
+So these 2 shells are connected via TCP, then, any message you sent from browser(shell) will be received in server(shell), and the same the opposite.
 
-This is how the message are sending back and forwards between server and browser.
+That's because the server is not configured to deal with the message it received, so by defualt it will just echo the message back to the client.
 
 # Connect to a real web address:
 
@@ -31,7 +33,7 @@ This is how the message are sending back and forwards between server and browser
     Host: cheeger.com
     Content-Type: */*
 
-You should be able to see the response from server:
+Here it will connect to a real website server and perform a GET request of "/", so you should be able to see the response:
 
     HTTP/1.1 301 Moved Permanently
     Server: nginx/1.10.3 (Ubuntu)
@@ -48,6 +50,8 @@ You should be able to see the response from server:
     <hr><center>nginx/1.10.3 (Ubuntu)</center>
     </body>
     </html>
+
+301 as it is redirect to https;
 
 # Open a real browser to connect to a fake server
 
@@ -70,4 +74,4 @@ This is just the very basic example of how to communicate via HTTP protocol, of 
 
 FYI, netcat/curl are great tools to play around your ideas.
 
-
+[http-wiki-url]:https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol

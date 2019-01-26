@@ -12,7 +12,7 @@ comments: false
 There are some significant changes in ES6 compared to ES5, here I will just list a few commonly used ones with examples.
 
 ES6 includes the following new features:
-- [Arrows](#arrows)
+- [Arrows Functions](#arrows)
 - [Promise](#promise)
 - [Await(ES7)](#await)
 - [Destructuring](#destructuring)

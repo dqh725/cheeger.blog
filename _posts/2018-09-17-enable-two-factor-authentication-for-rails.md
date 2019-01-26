@@ -21,16 +21,16 @@ If you want to enable two-factor authentication for rails app, you may find some
 
 - `$ bundle install`
 
-- edit your user model, Note, in rails5 your env key must be at least 32 bytes.
+- Add the following line into your user model. Note, rails5 your ENV key "MFA_ENCRYPTION_KEY" must be at least 32 bytes as required by OpenSSL;
 
-      devise :two_factor_authenticatable, otp_secret_encryption_key: ENV['YOUR_ENCRYPTION_KEY_HERE']
+      devise :two_factor_authenticatable, otp_secret_encryption_key: ENV['MFA_ENCRYPTION_KEY']
 
-- `$ rails generate devise_two_factor user YOUR_ENCRYPTION_KEY_HERE` This will generate a migration file, feel free to edit the `default && null` option, this will auto configure the devise initializer to define a `:two_factor_authenticatable` strategy.
+- Execute `$ rails generate devise_two_factor user MFA_ENCRYPTION_KEY` This will generate a migration file with extra fields used for user model, and it will also configure the devise initializer to define a `:two_factor_authenticatable` strategy.
 
 - `bundle exec rake db:migrate` Now you have database ready.
 
 #### 2. Override devise SessionsController
-- If you happen to use `activeadmin` like me, you could make an initializer to override the devise's session_controller
+- If you happen to use the `activeadmin` like I do, you could make an initializer to override the devise's session_controller
 
 ```ruby
 # config/initializers/active_admin_devise_sessions_controller.rb
@@ -144,7 +144,7 @@ end
 
 ```
 
-- If you are now not using ActiveAdmin, you can just override the session controller
+- If you do not use ActiveAdmin, you can just override the session controller
 
 ```ruby
 # app/controllers/sessions_controller.rb
@@ -154,7 +154,7 @@ end
 ```
 
 # Explanation
-The idea is to call a befor_action of `authenticate_with_two_factor` if the user.two_factor_enabled?, if validated, then it call the `:create` method in session controller.
+The idea is to call a befor_action of `authenticate_with_two_factor` if the user.two_factor_enabled?. If validated, then it call the `:create` method in session controller.
 
 # QRcode
 Generate a QRcode in the UI for the user to integrate the 2fa with a 3rd mobile application, and provide the code to actually enable this feature.

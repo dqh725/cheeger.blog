@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Burn iso to USB sticker for mac via dd command"
+title:  "Burn iso to USB sticker from mac via dd command"
 lang: en
 icon: B
 category: linux
