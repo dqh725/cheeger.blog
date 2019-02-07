@@ -3,6 +3,7 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+deploy
 
 # js build file
 assets/js/bundle.js
