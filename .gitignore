@@ -4,6 +4,7 @@ _site
 .jekyll-metadata
 node_modules
 deploy
+uploads
 
 # js build file
 assets/js/bundle.js
