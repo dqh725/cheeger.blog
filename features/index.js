@@ -1,8 +1,9 @@
-const express = require('express');
 const bodyParser = require('body-parser');
-const upload = require('multer')({ dest: 'uploads/' })
+const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const gm = require('gm').subClass({imageMagick: true});
+const upload = require('multer')({ dest: 'uploads/' })
 
 const app = express();
 const port = 8001;
