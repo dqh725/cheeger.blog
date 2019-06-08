@@ -13,3 +13,6 @@ assets/js/bundle.js
 *.swp
 *.swo
 *.swn
+
+archive.tar.gz
+node.tar.gz
