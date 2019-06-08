@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "curl command"
+title:  "curl"
 lang: en
 category: linux
 icon: B

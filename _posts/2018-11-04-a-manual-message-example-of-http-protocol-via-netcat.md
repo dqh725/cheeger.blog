@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Basic HTTP Protocol working theory via Netcat"
+title:  "Http protocol messaging demo via Netcat"
 lang: en
 category: develop
 icon: C

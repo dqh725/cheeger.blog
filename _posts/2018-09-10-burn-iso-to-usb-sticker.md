@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Burn iso to USB sticker from mac via dd command"
+title:  "dd/diskutil (mac)(Burn iso to USB sticker from mac)"
 lang: en
 icon: B
 category: linux

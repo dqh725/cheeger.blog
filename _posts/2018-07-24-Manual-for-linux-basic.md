@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Systemctl brief"
+title:  "systemctl"
 category: linux
 icon: u
 lang: en

@@ -7,15 +7,18 @@ lang: en
 tags: jQuery
 ---
 
-In short, `$.Deferred` and `Promise` are asynchronous value.
-Sepuencial asynchronous process will easily getting into callback hell, inorder to resolve the problem, these two concepts are introduced.
+`$.Deferred` and `Promise` are asynchronous value, a very powerful feature to execute a sequential functions in order based on the previous one's result, either succeed or failed.
 
-# $.Deferred
+## $.Deferred
 
 This is a jQuery implementation introduced in 1.5
-## Creation
-`var deferred = jQuery.Deferred();` or
-`var deferred = $.Deferred();`
+
+### Creation
+```
+var deferred = jQuery.Deferred();
+or
+var deferred = $.Deferred();
+```
 once it's created, it will expose these methods:
 
 - always(callback)
@@ -25,9 +28,21 @@ once it's created, it will expose these methods:
 - reject(value)
 - promose()
 
-`promise()` returns an object that is very similar to the `Deferred` object except that it only has `then(), done(), and fail()` methods and does not have `resolve() or reject()`.
+## Promise
 
-## Usage
+`new Promise(callbackForSuccess, callbackForFailed)` returns an object that is very similar to the `Deferred` object except that it only has `then(), done(), and fail()` methods and does not have `resolve() or reject()`.
+
+
+### Usage
+- example1:
+
+```javascript
+var promise = new Promise((callback1, callback2) => callback1("succeedValue"));
+promise.then(console.log); # => succeedValue;
+```
+
+- example2:
+
 ```javascript
 function lazy_work(){
   return new Promise((resolve, reject) => {

@@ -7,33 +7,58 @@ lang: en
 
 ---
 
+## Head
+
+# HEADING1(#)
+## HEADING2(##)
+### HEADING3(###)
+#### HEADING4(####)
+##### HEADING5(#####)
+
+---
+## Inline hightlight
+
 Inline \`code\` has \`back-ticks around\` it.
 
 Inline `code` has `back-ticks around` it.
 
-\`\`\`javascript
+\> you can \*put\* \*\*Markdown\*\* into a blockquote.
+
+> you can *put* **Markdown** into a blockquote.
+
+---
+## Multiple lines hightlight
+
+- \`\`\`javascript
 
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
-\`\`\`python
+- \`\`\`python
 
 ```python
 s = "Python syntax highlighting"
 print s
 ```
 
+- \{ % hightlight ruby %\}
+
+\{ % endhightlight %\} {% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
 ```
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
-\> you can \*put\* \*\*Markdown\*\* into a blockquote.
-
-> you can *put* **Markdown** into a blockquote.
-
-
+---
+## Horizontal line
 Three or more...
 
 \-\-\-
@@ -52,18 +77,7 @@ Asterisks
 
 ___
 
-Underscores
-
-\{ % hightlight ruby %\}
-
-\{ % endhightlight %\}
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+## Link \[text\]\[url\]
 
 \[blog.cheeger.com\]\[url\]
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Compress/Extract commands"
+title:  "zip/tar/xz"
 lang: en
 icon: B
 category: linux

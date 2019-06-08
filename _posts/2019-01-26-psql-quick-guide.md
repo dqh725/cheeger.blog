@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PostgreSQL Quickguide"
+title:  "PostgreSQL sql funcs Quickguide"
 lang: en
 icon: w
 category: develop
@@ -8,7 +8,7 @@ tags: postgres
 comments: true
 ---
 
-# introduction
+## Introduction
 A list of commonly used functions/indexes/helpers for postgres SQL statements;
 
 - [LOWER](#lower)
@@ -19,20 +19,20 @@ A list of commonly used functions/indexes/helpers for postgres SQL statements;
 - [EXPLAIN ANALYZE](#explain-analyze)
 - [Index](#index)
 
-# LOWER
+## LOWER
 ```sql
 SELECT LOWER("rooms"."name") FROM "rooms";
 ```
 This is straight forward, LOWER() function convert string into small case letters, non-alpha letters are skipped;
 
-# NOW
+## NOW
 ```sql
 SELECT (NOW() - "rooms"."created_at") FROM "rooms";
 ```
 NOW() will return the current date time from the postgres engine;
 so the result will be e.g. `5 days 13:58:30.700536`;
 
-# Interval
+## Interval
 ```sql
 SELECT (NOW() - INTERVAL '1 day');
            ?column?
@@ -42,7 +42,7 @@ SELECT (NOW() - INTERVAL '1 day');
 ```
 can do for `days, hours, minutes, seconds, ms, months, weeks, years` for interval
 
-# REGEX REPLACE
+## REGEX REPLACE
 replace string pattern with something string
 @params: (value, regex scanner, replace string[, 'g'])
 ```sql
@@ -54,7 +54,7 @@ SELECT REGEXP_REPLACE('<head>header</head><body>body<body>', '<[^\<]*>', '');
 ```
 This will remove the first match; resulting in `header</head><body>body<body>`
 
-# COALESCE
+## COALESCE
 Return the first non-null value, often used to replace null field to an alternative string;
 ```sql
 SELECT COALESCE(NULL, NULL, NULL, 'alternative', NULL, 'alternative2');
@@ -62,7 +62,7 @@ SELECT COALESCE(NULL, NULL, NULL, 'alternative', NULL, 'alternative2');
 this will return "alternative", and an example usage in relality is like this:
 `SELECT COALESCE("users"."name", 'guest');` purpose is to set default user name as `guest`;
 
-# EXPLAIN ANALYZE
+## EXPLAIN ANALYZE
 Syntax: add `EXPLAIN ANALYZE` to select statement will generate a analyse report, e.g.
 ```
 EXPLAIN ANALYZE SELECT  "rooms".* FROM "rooms" WHERE (REGEXP_REPLACE(LOWER(name), '[^a-z0-9]+', '', 'g') LIKE '%b7e%') ORDER BY levenshtein(name, 'b7e'), "rooms"."name";
@@ -84,7 +84,7 @@ EXPLAIN ANALYZE SELECT  "rooms".* FROM "rooms" WHERE (REGEXP_REPLACE(LOWER(name)
 
 `Seq Scan` is searching by sequencial order, `Bitmap Heap Scan` is for fields has bitmap index, so often it indicates index should be added for more efficiently searching.
 
-# Index
+## Index
 For fields whose value will be searched on WHERE clause directly, a b-tree index is good for that purpose:
 
 ```
