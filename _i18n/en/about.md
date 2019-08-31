@@ -1,6 +1,6 @@
 # Alba Hoo, Wenyue Hu
 
-Email: [huw.alba@gmail.com][email-to]
+Email: [alba@tenty.co][email-to]
 
 Address: [Yueqing Town, Wenzhou City, Zhejiang Province, China][address-url]
 
@@ -56,7 +56,7 @@ _2015.3 - 2016.3_ **Full-stack ruby on rails developer**, Romey(business closed)
 - Enabled SMS, email and instance notification on mobile
 - Integrated with PayPal SDK and Stripe API as payment methods
 
-_2015.9 - 2015.11_ **Front-end developer**, [PetHomeStay][pethomestay-url], Melbourne
+_2015.9 - 2015.11_ **Front-end developer**, PetHomeStay(business closed), Melbourne
 
 - Used additional tools for working with team, such as pivotal tracker, codeship and slack
 - Used haml as views of Ruby on Rails
@@ -77,8 +77,6 @@ _2015.9 - 2015.11_ **Front-end developer**, [PetHomeStay][pethomestay-url], Melb
 Connect to [Alba's LinkedIn][linkedIn]
 
 [address-url]:/general/2018/01/08/温州人为什么精于经商致富.html
-[email-to]: mailto:huw.alba@gmail.com
+[email-to]: mailto:alba@tenty.co
 [linkedIn]: https://au.linkedin.com/in/alba-hoo
-[romey-url]:https://www.romey.co
-[pethomestay-url]:https://www.pethomestay.com.au
 [vivi-url]:https://www.vivi.io

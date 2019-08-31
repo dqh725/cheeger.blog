@@ -8,10 +8,10 @@ tags: linux
 comments: true
 ---
 
-# CURL
+## CURL
 curl: transfer a url
 
-# curl GET
+## curl GET
 * Access a url
 ```
 curl www.cheeger.com
@@ -52,7 +52,7 @@ curl -kv https://www.cheeger.com
 curl --proxy yourproxy:port http://www.cheeger.com
 ```
 
-# curl POST
+## curl POST
 * POST with single field
 ```
 curl -XPOST www.cheeger.com -d oneKey=simpleValu
@@ -73,3 +73,9 @@ curl \
   -F "file=@/home/user1/Desktop/test.jpg" \
   localhost:8000/upload
 ```
+
+## curl with proxy
+```
+curl --header "X-Forwarded-For: 1.1.1.1" http_url
+```
+curl on behalf of 1.1.1.1
