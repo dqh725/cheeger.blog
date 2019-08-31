@@ -2,8 +2,8 @@
 layout: post
 title:  "Configure ubuntu nginx for rails server"
 lang: en
-category: general
-tags: tag1
+category: develop
+tags: nginx, rails, unicorn
 comments: true
 ---
 
