@@ -28,6 +28,7 @@ sass:
   sass_dir: assets/_sass
 
 exclude: [
+  "archive.tar.gz",
   "features",
   "node_modules",
   "js-src",

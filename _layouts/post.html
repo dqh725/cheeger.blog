@@ -17,12 +17,29 @@ layout: default
   </div>
 
 </article>
+<div id="gitalk-container"></div>
 {% if page.comments %}
-<script>
-var idcomments_acct = 'a20779523aff068b009d4e96dc8479bb';
-var idcomments_post_id = "{{ page.id }}";
-var idcomments_post_url = "{{ site.url }}{{ page.url }}";
+<!-- Gitalk 评论 start  -->
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+  <script type="text/javascript">
+  var lang = "{{ page.lang }}";
+  var title = "{{ page.title }}";
+  var gitalk = new Gitalk({
+    // gitalk的主要参数
+    clientID: atob('YjgwNjBmNTg3ZDhmMzVhYzIxZTY='),
+    clientSecret: atob('ZWE2Y2M5MzlhMWI4MjlhYTlmZjM0MjQ4N2JjNjcyMTQ4YjkwYTVlMQ=='),
+    repo: 'cheeger.blog',
+    owner: 'AlbaHoo',
+    admin: ['AlbaHoo'],
+    language: lang == 'en' ? 'en' : 'zh-CN',
+    id: title.length >= 50 ? title.slice(0, 48) : title,
+    distractionFreeMode: false
+  });
+  gitalk.render('gitalk-container');
 </script>
-<span id="IDCommentsPostTitle" style="display:none"></span>
-<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+<!-- Gitalk end -->
 {% endif %}
