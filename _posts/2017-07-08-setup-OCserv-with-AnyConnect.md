@@ -10,15 +10,7 @@ tags: VPN cisco
 
 # OCserv_with_anyconnect
 
-
-## OCserv on Ubuntu 16.04 for Cisco AnyConnect Client
-
-
-
-<div class="entry-meta"><span class="author vcard">[<span class="fn">Ri Xu</span>](https://xuri.me/author/xuri)</span> <span class="date updated">[March 19, 2016](https://xuri.me/2016/03/19/ocserv-on-ubuntu-16-04-for-cisco-anyconnect-client.html "18:50")</span> <span class="category">[Linux](https://xuri.me/category/linux)</span> <span class="comments">[1 Comment](https://xuri.me/2016/03/19/ocserv-on-ubuntu-16-04-for-cisco-anyconnect-client.html#disqus_thread)</span></div>
-
-</div>
-
+## OCserv on Ubuntu 16.04 (18.04) for Cisco AnyConnect Client
 
 ![Cisco AnyConnect Secure Mobility Client](https://xuri.me/wp-content/uploads/2016/03/ocserv-on-ubuntu-16-04-for-cisco-anyconnect-client-10.png)
 
@@ -26,7 +18,7 @@ tags: VPN cisco
 
 OCserv is the OpenConnect VPN server. Its purpose is to be a secure, small, fast and configurable VPN server. It implements the OpenConnect SSL VPN protocol, and has also (currently experimental) compatibility with clients using the AnyConnect SSL VPN protocol. The OpenConnect protocol provides a dual TCP/UDP VPN channel, and uses the standard IETF security protocols to secure it. The server is implemented primarily for the GNU/Linux platform but its code is designed to be portable to other UNIX variants as well. From Ubuntu 16.04 onward, OCserv is included in the standard Ubuntu repositories, so you do not need to compile it from source. In this tutorial the iOS 9 client, which could be an iPad or an iPhone, will connect to the VPN server using the Cisco AnyConnect VPN client.
 
-**Install packages on server**
+**1. Install packages on server**
 
 Log on to your server and install the OCserv package:
 
@@ -40,7 +32,7 @@ We will also need the GnuTLS package, since we use the GnuTLS utilities to gener
 
 We can use self-signed certificates or using a purchased commercial certificate from CA certificate providers, such as [Comodo](https://www.comodo.com/), [StartSSL](https://www.startssl.com/), [WoSign](https://www.wosign.com/english/) and etc.
 
-**Make CA certificate and server certificate**
+**2-1. Make CA certificate and server certificate**
 
 The GnuTLS certificate tool (`certtool`) allows you to specify the fields for your certificates in a configuration template file.
 
@@ -82,7 +74,7 @@ Press the <kbd>I</kbd> key on your keyboard to enter insert mode.
 
 Enter the following fields into the server configuration file. Note that in the common name (`cn`) field, you must specify your actual server IP address or hostname (shown as `vpn.xuri.me` in the example that follows):
 
-<pre>cn = "vpn.xuri.me"
+<pre>cn = "vpn.xuri.me or server IP"
 organization = "My Org"
 expiration_days = 3650
 signing_key
@@ -100,7 +92,7 @@ $ sudo certtool --generate-certificate --load-privkey server-key.pem \
     --template server.tmpl --outfile server-cert.pem
 </pre>
 
-**Use commercial certificate**
+**2-2. OR use commercial certificate OR Let's Encrypt**
 
 For example I use [WoSign Free SSL Certificates](https://buy.wosign.com/free/). I got `1_vpn.xuri.me_bundle.crt` and `2_vpn.xuri.me.key` two files. Convert `.crt` certificate to `.pem` format:
 
@@ -121,7 +113,7 @@ $ wget http://cert.startssl.com/certs/sub.class1.server.ca.pem
 $ cat cert.crt sub.class1.server.ca.pem ca.pem > server-cert.pem
 </pre>
 
-**Configure the OpenConnect VPN server**
+**3. Configure the OpenConnect VPN server**
 
 Edit the OCserv sample configuration file that is provided in `/etc/ocserv`:
 
@@ -141,6 +133,9 @@ server-key = /etc/ocserv/server-key.pem
 #try-mtu-discovery = false
 try-mtu-discovery = true
 
+# tunnel-all-dns = true
+tunnel-all-dns = true
+
 #dns = 192.168.1.2
 dns = 8.8.8.8
 
@@ -156,7 +151,7 @@ cisco-client-compat = true
 
 When you have finished entering the above, escape from insert mode, write the file to disk, and quit the editor.
 
-**Create user id and password**
+**4. Create user id and password**
 
 Generate a user id and password that you will use to authenticate from AnyConnect to OCserv. For example, if you want your user id to be `xuri`:
 
@@ -169,7 +164,7 @@ You will be prompted to enter a password twice. The password will not be display
 Re-enter password:
 </pre>
 
-**Enable packet forwarding**
+**5. Enable packet forwarding**
 
 Allow forwarding in the Linux kernel by editing the system control configuration file:
 
@@ -186,7 +181,7 @@ Write the file to disk and quit the editor, and make this change active now:
 <pre>$ sudo sysctl -p
 </pre>
 
-**Open firewall**
+**6-1. Open firewall**
 
 Open the server firewall for SSL:
 
@@ -204,7 +199,16 @@ Assuming you have already installed `iptables-persistent`, reconfigure it to mak
 <pre>$ sudo dpkg-reconfigure iptables-persistent
 </pre>
 
-**Start OpenConnect VPN server**
+**6-2 Open firewall for cloud Services, e.g aws or alicloud**
+
+Firewall is managed by security group, make sure you have added the inbound rules of 443 and 80.
+Firstly, use `ip a` to get the UP interface devices, in my case it's `eth0` in my alicloud ecs.
+
+Enable network address translation (NAT) will be :
+
+<pre>$ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</pre>
+
+**7. Start OpenConnect VPN server**
 
 Check that nothing is already listening on port 443:
 
@@ -223,7 +227,7 @@ Check that it is now listening on port 443 with the command:
 <pre>$ sudo netstat -tulpn | grep 443
 </pre>
 
-**Make CA certificate available for download**
+**8 Make CA certificate available for download**
 
 Your client such as Mac, iPad or iPhone needs to be able to validate the server certificate. To allow it to do this, you must install your CA certificate on the iPad or iPhone as a trusted root certificate. The first step in this is to make the CA certificate available for download from your server.
 
@@ -232,10 +236,13 @@ Open the firewall so that you can reach the server from a browser:
 <pre>$ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 </pre>
 
-Install Apache:
+Install Apache or Nginx:
 
-<pre>$ sudo apt-get install apache2
-</pre>
+<pre>$ sudo apt-get install apache2</pre>
+
+OR
+
+<pre>$ sudo apt-get install nginx</pre>
 
 Copy the CA certificate into the web root folder:
 
