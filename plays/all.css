@@ -183,7 +183,7 @@ a{
 .sb-container div {
     position: absolute;
 	top: 0;
-	left: 0; 
+	left: 0;
 	width: 130px;
 	background: #fff;
 	height: 400px;
@@ -191,19 +191,19 @@ a{
 	cursor: pointer;
 	text-align: center;
 	background-image: url(../images/fabric.png);
-	
+
 	-webkit-transform-origin: 25% 90%;
 	-moz-transform-origin: 25% 90%;
 	-o-transform-origin: 25% 90%;
 	-ms-transform-origin: 25% 90%;
 	transform-origin: 25% 90%;
-	
+
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
-	
+
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -264,7 +264,7 @@ a{
 
 .sb-container div:last-child{
 	background: #645b5c url(../images/cover.jpg) repeat center center;
-	box-shadow: 
+	box-shadow:
 		-1px -1px 3px rgba(0,0,0,0.2),
 		12px 12px 20px rgba(0,0,0,0.6),
 		inset 2px 2px 0 rgba(255, 255, 255, 0.1);
@@ -325,19 +325,19 @@ a{
 	color: #111;
 	text-shadow: -1px -1px 1px rgba(255,255,255,0.1);
 	text-transform: uppercase;
-	
+
 	-webkit-transform: rotate(-90deg) translateX(-157%) translateY(73px);
 	-moz-transform: rotate(-90deg) translateX(-157%) translateY(73px);
 	-o-transform: rotate(-90deg) translateX(-157%) translateY(73px);
 	-ms-transform: rotate(-90deg) translateX(-157%) translateY(73px);
 	transform: rotate(-90deg) translateX(-157%) translateY(73px);
-	
+
 	-webkit-transform-origin: 0 0;
 	-moz-transform-origin: 0 0;
 	-o-transform-origin: 0 0;
 	-ms-transform-origin: 0 0;
 	transform-origin: 0 0;
-	
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -367,7 +367,7 @@ span.sb-icon:before {
 	display: block;
 	text-decoration: inherit;
 	text-align: center;
-	text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); 
+	text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 	line-height: 64px;
 	width: 100%;
 	font-size: 60px;
