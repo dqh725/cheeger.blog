@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Android emulator quick guide"
+title:  "Android development quick guide"
 lang: en
 category: develop
 tags: android, adb
 comments: true
 ---
 
-# 1. Quick command line tool for adb
+# 1. adb usage
+### Quick command line tool for adb
 
 - `adb devices`: list all connected devices
 - `adb connect IP_ADDR`: connect to a device within the same LAN
@@ -18,7 +19,17 @@ comments: true
 - `adb pull /system/priv-app/Launcher3`: to download file from android device to local machine
 - `adb push DIR_OF_LOCAL DIR_OF_ANDROID`: to upload local file to android device
 
-## Uninstall system app
+### Uninstall system app
+if connected with cable
+```bash
+adb root
+adb remount
+adb shell
+rm  -rf /system/priv-app/SuperSU # delete supersu for example
+reboot
+```
+
+else connected wirelessly
 ```bash
 adb shell
 su    # will ask for permission, accept it
@@ -28,7 +39,6 @@ reboot
 ```
 
 # 2. Local machine connect to emulator
-
 I have a web server hosted in an android emulator, and I would like to access it from my local machine;
 
 ```bash
@@ -51,14 +61,35 @@ auth DCbP4qqM4bsswhhh
 ```
 redir add tcp:8080:8080
 ```
-then you can access the emulator via host-port
+then you can access the emulator via the host and the port
 
 # 3. Restart Logcat
 
 Sometimes android Logout will not working properly, showing nothing in the console, the most simple way to resolve this issue is to restart logcat(adb server);
 
 ```
-cd $ANDROID_HOME/platform-tools && adb kill-server && adb start-server
+adb kill-server && adb start-server
 ```
-All set;
+# 4. How to check android CPU is 32 or 64
+```bash
+$ cat /proc/cpuinfo
+```
+
+the result will looks like this:
+```
+Processor : AArch64 Processor rev 4 (aarch64)
+processor : 0
+processor : 1
+processor : 2
+processor : 3
+Features : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: AArch64
+CPU variant : 0x0
+CPU part : 0xd03
+CPU revision : 4
+
+Hardware : Amlogic
+Serial : adsf
+```
 

@@ -109,4 +109,4 @@ rbenv安装好了以后，我们可以通过他的插件ruby-build来安装ruby
  检测安装的rails版本和nodejs版本；
 
 ## 下载rails APP代码
- To be continue...
+下一篇日志，Ubuntu部署RubyonRails生产环境(二)

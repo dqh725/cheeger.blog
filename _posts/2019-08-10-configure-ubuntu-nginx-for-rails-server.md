@@ -27,9 +27,9 @@ bundle exec rake db:migrate assets:precompile
 ```
 
 # Add nginx config file
-There is 2 folders under `/etc/nginx/`, `site-availables` and `site-enabled`.
+There are two folders under `/etc/nginx/`, `site-availables` and `site-enabled`.
 
-There is a `default` config file inside `/etc/nginx/site-availables/` folder, use it as a template but create a new configure file, call it `web` or whatever you want, here is one example.
+There is a `default` config file inside `/etc/nginx/site-availables/` folder, you can use it as a template but I always create a new configure file call it `web` or whatever you want, here is one example.
 
 ```
 upstream app {
@@ -63,9 +63,8 @@ server {
 }
 
 ```
-Now `/etc/nginx/site-avaibales/web` is ready, to enable it:
+Now `/etc/nginx/site-avaibales/web` is ready, to enable it, just create a softlink pointing to `/etc/nginx/sites-enabled/web`
 
-then create a softlink web in `/etc/nginx/sites-enabled/web`
 ```bash
 sudo ln -s /etc/nginx/sites-available/web /etc/nginx/sites-enabled
 ```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "zip/tar/xz"
+title:  "Compress with zip/tar/xz"
 lang: en
 icon: B
 category: linux
@@ -52,7 +52,7 @@ extract from a `.tar.bz2`
     tar -xjvf archive.tar.gz
 
 # xz
-compress a folder(even harder)
+compress a folder, this will result in a much higher compression rate, but takes longer to compress and decompress.
 
     tar -cJvf etc.tar.xz /folder
 

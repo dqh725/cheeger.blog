@@ -75,6 +75,39 @@ for android studio, add to `build.gradle`
 
 ### Rails Gem
 [github sdk][rails-mqtt]
+A quick example:
+
+```ruby
+class SyncJob < ApplicationJob
+  queue_as :default
+
+  MQTT_USER = ENV['MQTT_USER'].freeze
+  MQTT_PASSWORD = ENV['MQTT_PASSWORD'].freeze
+  MQTT_HOST = ENV['MQTT_HOST'].freeze
+
+  def perform(box_id, payload)
+    client = build_client
+    client.publish(box_id, payload)
+    client.disconnect
+  end
+
+  private
+
+  def build_client
+    MQTT::Client.connect(
+      host: MQTT_HOST,
+      port: 1883,
+      username: MQTT_USER,
+      password: MQTT_PASSWORD
+    )
+  rescue Errno::ECONNREFUSED => e
+    Rails.logger.error('connection failed to establish')
+  rescue MQTT::Exception => e
+    Rails.logger.error('username/password incorrect')
+  end
+end
+
+```
 
 [mosquitto-man]: https://mosquitto.org/man/mosquitto-conf-5.html
 [android-skd]: https://github.com/eclipse/paho.mqtt.android

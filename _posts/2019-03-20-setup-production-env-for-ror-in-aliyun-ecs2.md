@@ -30,7 +30,7 @@ POSTGRESQL_DATABASE=''
     bundle exec rake db:create db:migrate
 
 ## 选择app server
-通常情况下在本地运行rails s的时候使用的是webrick作为app server，它开发可以，但是在生成环境有各种缺陷
+通常情况下在本地运行rails server的时候使用的是webrick作为app server, 它在生成环境有各种缺陷：
 - 慢：它本身是ruby写的
 - 无法处理长URI，最多2083的字符
 - 单线程：并发处理差

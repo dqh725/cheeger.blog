@@ -15,35 +15,27 @@
 
 来自: [中国浙江省乐清市][address-url]
 
-`主要语言`
-{% highlight ruby %}
-网页全栈:
- - Ruby on Rails + PostgreSQL
-微服务:
- - Node
- - Python
- - MatLab
-前端框架:
- - React, Ember, webpack
-应用开发:
- - Android
- - Cordova
- - Electron
-{% endhighlight %}
-
 ---
 ---
 <br>
 #### **关于我**
 
 1. 具有5年ruby on rails全栈开发经验, 能熟练运用rspec做TDD开发;
-2. 熟悉PostgreSQL数据库操作;
-3. 了解AWS服务部署;
-4. 熟悉阿里云服务器部署
+2. 熟悉PostgreSQL数据库部署以及SQL优化;
+3. 熟悉阿里云和AWS云服务
 4. 具有物联开发经验;
 5. 熟悉linux系统;
 6. 熟悉脚本管理工具*Ansible*;
-7. 熟悉通用的网络协议, 包括 HTTP(S), TCP/IP;
+7. vim + tmux编辑器粉丝
+
+`主要语言`
+{% highlight ruby %}
+ - 网页全栈: Ruby on Rails + PostgreSQL
+ - 微服务: Node, Python
+ - 前端框架：React, Taro(微信小程序), Ember
+ - 应用开发: Android，Cordova，Electron
+{% endhighlight %}
+
 
 ---
 ---
@@ -64,9 +56,9 @@ _2008.6 - 2012.6_ 工科学士, 材料科学与工程, *浙江大学*, 中国
 简介：简易管理数字告示系统
 
 - 后台管理网站
-- 物联网设备客户端
-- 公司基本管理
-- 客户管理系统
+- redis后台函数
+- 物联网设备系统开发
+- 微信小程序开发
 
 _2017.9 - 至今_ **远程工作**, [Vivi International][vivi-url], 中国
 

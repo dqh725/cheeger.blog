@@ -23,5 +23,9 @@
     "jquery": "^2.2.4",
     "simple-jekyll-search": "^1.7.0",
     "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
