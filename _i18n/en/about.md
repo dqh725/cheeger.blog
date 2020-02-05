@@ -4,6 +4,8 @@ Email: [alba@tenty.co][email-to]
 
 Address: [Yueqing Town, Wenzhou City, Zhejiang Province, China][address-url]
 
+**Generic Skills**
+---
 {% highlight ruby %}
 General: Ruby, NodeJS, Java, Python, C, MatLab
 Frontend: React, Ember, npm, webpack
@@ -12,12 +14,10 @@ Dabatase: SQL(PostgreSQL), noSQL(mongoDB)
 Mobile: Cordova, Electron, Android
 {% endhighlight %}
 
-**Generic Skills**
 ---
-
-1. Worked as Ruby on Rails full-stack for 3 years, familar with rspec tool.
+1. Worked as full-stack Ruby on Rails software developer for 5 years, familar with rspec for TDD.
 2. Good knowledge of Database design and optimisation, especially in PostgreSQL.
-3. Experienced in using many ASW/Azure services, like EC2, Lambda, S3 and so on.
+3. Experienced in using many ASW/Azure services.
 4. General knowlege of linux (Ubuntu) commands, for server management.
 5. Big fan of *Ansible* for shell management.
 6. Familiar with web protocols, e.g. HTTP(S), TCP/IP, WebSocket and Shadowsocks protocols.
@@ -34,13 +34,14 @@ _2008.6 - 2012.6_ Bachelar of Material Science & Engineering, *Zhejiang Universi
 **Professional Experience**
 ---
 
-_2017.8 - current_ **Software Engineer (Contractor)**, [Vivi International][vivi-url], Melbourne
+_2017.8 - 2020.01_ **Software Engineer (Contractor)**, [Vivi International][vivi-url], Melbourne
 
-- Work from home, remotely in China as a contractor.
-- Business As Usual, daily video meeting (Standup).
-- Micro services in the box side.
-- Ember + Cordova/Electron in the client side.
-- More features in the backend portal.
+- Worked from home, remotely in China as a contractor.
+- Business as usual, daily standup video meeting.
+- Maintained microservices.
+- Ember + Cordova/Electron for cross-platform client applications.
+- Maintained RoR backend
+- Migrated frontend to full-blown single-page app (React).
 - AWS services, ELK/Lambda/S3
 
 _2016.6 - 2017.8_ **Software Developer**, [Vivi International][vivi-url], Melbourne
@@ -58,16 +59,15 @@ _2015.3 - 2016.3_ **Full-stack ruby on rails developer**, Romey(business closed)
 
 _2015.9 - 2015.11_ **Front-end developer**, PetHomeStay(business closed), Melbourne
 
-- Used additional tools for working with team, such as pivotal tracker, codeship and slack
-- Used haml as views of Ruby on Rails
+- CSS/JS developer with Ruby on Rails application
 
 **Personal Projects**
 ---
 
 **Blogs search engine algorithm research**, using Python
 
-- Developed a TF-IDF model system for fast key word searching like Google/Baidu
-- Investigated query language patterns used by various IR engines
+- Developed a TF-IDF model system for fast blog search engine.
+- Investigated query language patterns used by various IR engines.
 
 **Synchronization System, using JAVA**, using JAVA
 
