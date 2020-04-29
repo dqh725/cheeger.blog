@@ -20,7 +20,7 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "simple-jekyll-search": "^1.7.0",
     "slick-carousel": "^1.8.1"
   },
