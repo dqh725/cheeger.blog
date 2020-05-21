@@ -13,29 +13,33 @@
 
 邮箱: [alba@tenty.co][email-to]
 
-来自: [中国浙江省乐清市][address-url]
+祖籍: [中国浙江省乐清市][address-url]
+
+<br>
 
 ---
 ---
+
 <br>
+
 #### **关于我**
 
-1. 具有5年ruby on rails全栈开发经验, 能熟练运用rspec做TDD开发;
-2. 熟悉PostgreSQL数据库部署以及SQL优化;
-3. 熟悉阿里云和AWS云服务
-4. 具有物联开发经验;
-5. 熟悉linux系统;
-6. 熟悉脚本管理工具*Ansible*;
-7. vim + tmux编辑器粉丝
+1. 具有5年Ruby on Rails全栈开发经验, 熟悉rspec做TDD开发;
+1. 具有3年Ember和React开发经验
+2. 熟悉PostgreSQL, 数据库语言SQL, 部署工具sqitch, RESTful API工具PostGREST;
+3. 熟悉阿里云和AWS云服务功能;
+4. 具有多年物联开发经验, 了解Mqtt协议;
+5. 熟悉linux系统(ubuntu), 脚本管理工具Ansible;
+6. 了解并具有内存缓存数据库使用经验，Redis;
+7. vim编辑器爱好者
 
 `主要语言`
-{% highlight ruby %}
- - 网页全栈: Ruby on Rails + PostgreSQL
- - 微服务: Node, Python
- - 前端框架：React, Taro(微信小程序), Ember
- - 应用开发: Android，Cordova，Electron
-{% endhighlight %}
 
+     - 后端: Ruby, SQL, Nodejs
+     - 微服务: Nodejs, Python
+     - 前端框架：React, Taro(微信小程序)
+     - 前端UI集：BlueprintJS, Ant Design, MATERIAL-UI
+     - 客户端应用开发: Android，Cordova，Electron, ReactNative
 
 ---
 ---
@@ -51,7 +55,25 @@ _2008.6 - 2012.6_ 工科学士, 材料科学与工程, *浙江大学*, 中国
 <br>
 #### **工作经验**
 
-2019.1 - 至今 **自主创业**, [Tenty][tenty-url], 十体科技（杭州）有限公司
+2020.02 - 至今 **兼职** [Coriolis Technology][coriolis-url], 英国伦敦
+
+简介: 全球贸易数据可视化开发
+
+- 基于AWS云服务
+- PostgreSQL + PostGREST作为后端
+- React + d3做可视化前端开发
+- 每周20小时
+
+2019.12 - 2020.06 **外接项目** 合隆节能厨具有限公司节能厨具, 中国广州
+
+简介: 前端后端加客户端的全套系统, 两人小队，我负责协调项目合作以及和客户的需求讨论对接。
+
+- 基于阿里云服务
+- RoR RESTful API开发
+- React前端
+- React Native安卓端
+
+2019.1 - 至今 **自主创业**, [十体科技（杭州）有限公司][tenty-url], 中国杭州
 
 简介：简易管理数字告示系统
 
@@ -84,29 +106,18 @@ _2015.3 - 2016.3_ **网站开发工程师**, Romey(已停运), 墨尔本
 - 集成SMS，邮箱，通知推送
 - 在线支付PayPal SDK / Stripe API
 
-_2015.9 - 2015.11_ **前端工程师**, PetHomeStay(已停运), 墨尔本
-
-- 网站前端开发
-
 ---
 ---
 <br>
-#### **个人项目**
 
-**博客搜索引擎**, Python
+个人博客: [https://cheeger.com/][cheeger]
 
-- Developed a TF-IDF model system for fast key word searching like Google/Baidu
-- Investigated query language patterns used by various IR engines
-
-**文件视频同步系统**, JAVA
-
-- Designed a client-server architecture for file synchronization software
-- Used a P2P architecture for video synchronization distributed system
-
- 我的LinkedIn账号 [[Alba][linkedIn]]
+LinkedIn账号 [alba-hoo][linkedIn]
 
 [address-url]:/general/2018/01/08/温州人为什么精于经商致富.html
 [email-to]: mailto:alba@tenty.co
 [linkedIn]: https://au.linkedin.com/in/alba-hoo
+[cheeger]: https://cheeger.com/
 [vivi-url]:https://www.vivi.io
 [tenty-url]:https://tenty.co
+[coriolis-url]: https://coriolistechnologies.com
