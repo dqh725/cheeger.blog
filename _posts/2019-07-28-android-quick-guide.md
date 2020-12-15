@@ -93,3 +93,7 @@ Hardware : Amlogic
 Serial : adsf
 ```
 
+#5 quick fixes
+
+cannot resolve my own classes
+You can do "File" -> "Invalidate Caches...", and select "Invalidate and Restart" option to fix this.
