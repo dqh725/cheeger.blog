@@ -1,0 +1,14 @@
+<li>
+  <span class="post-meta">{{ date | date: "%b %-d, %Y" }}</span>
+
+  {% for tag in tags %}
+    <span class="tag-item">{{ tag }}</span>
+  {% endfor %}
+
+  <h2>
+    <a class="post-link" href="{{ url | prepend: site.baseurl }}">
+      {% if icon %} <span class="icon" data-icon="{{ icon }}"></span> {% endif %}
+      {{ title }}
+    </a>
+  </h2>
+</li>

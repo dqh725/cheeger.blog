@@ -1,0 +1,31 @@
+{
+  "name": "cheeger",
+  "version": "1.0.0",
+  "description": "go to the `_posts/` add a post with name following",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbaHoo/cheeger.blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbaHoo/cheeger.blog/issues"
+  },
+  "homepage": "https://github.com/AlbaHoo/cheeger.blog#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "jquery": "^2.2.4",
+    "simple-jekyll-search": "^1.7.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

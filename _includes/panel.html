@@ -1,0 +1,22 @@
+  <ul class="nav">
+    <li class="nav-item">
+      <span data-icon="3" class="icon"></span>
+      <a href="{%if site.lang == 'en'%}/en{%endif%}/category/all.html" class="btn btn-default">{% t category.c0 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="3" class="icon"></span>
+      <a href="{%if site.lang == 'en'%}/en{%endif%}/category/develop.html" class="btn btn-default">{% t category.c2 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="3" class="icon"></span>
+      <a href="{%if site.lang == 'en'%}/en{%endif%}/category/general.html" class="btn btn-default">{% t category.c1 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="3" class="icon"></span>
+      <a href="{%if site.lang == 'en'%}/en{%endif%}/category/linux.html" class="btn btn-default">{% t category.c3 %}</a>
+    </li>
+    <li class="nav-item">
+      <span data-icon="r" class="icon"></span>
+      <a href='{{ "/feed.xml" | prepend: site.baseurl }}'>{% t subscribe %}</a>
+    </li>
+  </ul>

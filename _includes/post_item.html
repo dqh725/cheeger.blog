@@ -1,0 +1,15 @@
+<li>
+  <span class="post-meta">{{ include.post.date | date: "%b %-d, %Y" }}</span>
+
+  {% for tag in include.post.tags %}
+    <span class="tag-item">{{ tag }}</span>
+  {% endfor %}
+
+  <h2>
+    {% if include.post.icon %} <span class="icon" data-icon="{{ include.post.icon }}"></span> {% endif %}
+    <span><a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}">
+      {{ include.post.title }}
+      </a></span>
+    <span class="word-count"> ({{ include.post.content | number_of_words }})</span>
+  </h2>
+</li>

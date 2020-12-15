@@ -1,0 +1,40 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+#
+plugins: ["jekyll-paginate", "jekyll-multiple-languages-plugin"]
+
+email: dqh725@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cheeger.com" # the base hostname & protocol for your site
+github_username:  albahoo
+image_root: /assets/images/posts
+
+# Build settings
+markdown: kramdown
+
+# enable pagination for posts
+paginate: 5
+languages: ["cn", "en"]
+exclude_from_localizations: [ "_posts", "node_modules", "features" ]
+
+# set the sass fold path
+sass:
+  sass_dir: assets/_sass
+
+exclude: [
+  "archive.tar.gz",
+  "features",
+  "node_modules",
+  "js-src",
+  "package.json",
+  "package-lock.json",
+  "add.sh",
+  "deploy.sh",
+  "webpack.config.js"
+]

@@ -1,0 +1,30 @@
+#!/bin/sh
+# rebuild
+rm -rf _site
+webpack
+jekyll build
+
+echo 'Compressing...'
+tar -czvf archive.tar.gz ./_site --exclude=./_site/deploy* --exclude=/.git >/dev/null 2>&1
+# tar -czvf node.tar.gz --exclude=features/node_modules features >/dev/null 2>&1
+echo 'Compressed archive.tar.gz/node.tar.gz'
+
+echo 'Start transfer compressed file to ali cloud...'
+scp -r archive.tar.gz alid:~
+
+echo 'Unpack tar file in the remote server...'
+# tar -xzvf node.tar.gz -C /srv/www --transform 's/features/cheeger_patch/' >/dev/null 2>&1;\
+
+unzip_command="tar -xzvf archive.tar.gz -C /srv/www --transform 's/_site/cheeger.com/' >/dev/null 2>&1;\
+exit"
+ssh alid  "$unzip_command"
+
+# echo 'Install node module'
+# node_command="cd /srv/www/cheeger_patch;\
+# yarn install --production;\
+# forever restart index.js;\
+# exit"
+# ssh alid  "$node_command"
+rm archive.tar.gz
+
+echo 'Done'
