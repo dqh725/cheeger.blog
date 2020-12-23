@@ -1,0 +1,18 @@
+_site
+.DS_Store
+.sass-cache
+.jekyll-metadata
+.jekyll-cache
+node_modules
+uploads
+
+# js build file
+assets/js/bundle.js
+
+# vim swap files
+*.swp
+*.swo
+*.swn
+
+archive.tar.gz
+node.tar.gz

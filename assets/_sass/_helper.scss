@@ -1,0 +1,16 @@
+.text-right {
+  text-align: right;
+}
+
+.idc-loginbtn_wordpress, .idc-head_tools-login, .idc-head_tools-share {
+  display: none !important;
+}
+
+.icon {
+  color: $grey-color-dark;
+  vertical-align: middle;
+  &.highlight {
+    color: firebrick;
+  }
+}
+
