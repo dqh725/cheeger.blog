@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PostgreSQL sql funcs Quickguide"
+title:  "PostgreSQL SQL functions examples"
 lang: en
 icon: w
 category: develop
@@ -11,28 +11,34 @@ comments: true
 ## Introduction
 A list of commonly used functions/indexes/helpers for postgres SQL statements;
 
-- [LOWER](#lower)
-- [NOW](#now)
-- [INTERVAL](#interval)
-- [REGEX_REPLACE](#regex-replace)
-- [COALESCE](#coalesce)
-- [EXPLAIN ANALYZE](#explain-analyze)
-- [Index](#index)
+- [Basic Functions](#basic-functions)
+    - [LOWER](#lower)
+    - [NOW](#now)
+    - [INTERVAL](#interval)
+    - [REGEX_REPLACE](#regex-replace)
+    - [COALESCE](#coalesce)
+    - [EXPLAIN ANALYZE](#explain-analyze)
+    - [Index](#index)
+- [Advanced Examples](#advanced)
+    - [Refresh all Mview](#refresh-materialized-views)
+    - [Remove duplication based on table field](#Remove-duplication-based-on-table-field)
 
-## LOWER
+## Basic Functions
+
+### LOWER
 ```sql
 SELECT LOWER("rooms"."name") FROM "rooms";
 ```
 This is straight forward, LOWER() function convert string into small case letters, non-alpha letters are skipped;
 
-## NOW
+### NOW
 ```sql
 SELECT (NOW() - "rooms"."created_at") FROM "rooms";
 ```
 NOW() will return the current date time from the postgres engine;
 so the result will be e.g. `5 days 13:58:30.700536`;
 
-## Interval
+### Interval
 ```sql
 SELECT (NOW() - INTERVAL '1 day');
            ?column?
@@ -42,7 +48,7 @@ SELECT (NOW() - INTERVAL '1 day');
 ```
 can do for `days, hours, minutes, seconds, ms, months, weeks, years` for interval
 
-## REGEX REPLACE
+### REGEX REPLACE
 replace string pattern with something string
 @params: (value, regex scanner, replace string[, 'g'])
 ```sql
@@ -54,7 +60,7 @@ SELECT REGEXP_REPLACE('<head>header</head><body>body<body>', '<[^\<]*>', '');
 ```
 This will remove the first match; resulting in `header</head><body>body<body>`
 
-## COALESCE
+### COALESCE
 Return the first non-null value, often used to replace null field to an alternative string;
 ```sql
 SELECT COALESCE(NULL, NULL, NULL, 'alternative', NULL, 'alternative2');
@@ -62,7 +68,7 @@ SELECT COALESCE(NULL, NULL, NULL, 'alternative', NULL, 'alternative2');
 this will return "alternative", and an example usage in relality is like this:
 `SELECT COALESCE("users"."name", 'guest');` purpose is to set default user name as `guest`;
 
-## EXPLAIN ANALYZE
+### EXPLAIN ANALYZE
 Syntax: add `EXPLAIN ANALYZE` to select statement will generate a analyse report, e.g.
 ```
 EXPLAIN ANALYZE SELECT  "rooms".* FROM "rooms" WHERE (REGEXP_REPLACE(LOWER(name), '[^a-z0-9]+', '', 'g') LIKE '%b7e%') ORDER BY levenshtein(name, 'b7e'), "rooms"."name";
@@ -84,7 +90,7 @@ EXPLAIN ANALYZE SELECT  "rooms".* FROM "rooms" WHERE (REGEXP_REPLACE(LOWER(name)
 
 `Seq Scan` is searching by sequencial order, `Bitmap Heap Scan` is for fields has bitmap index, so often it indicates index should be added for more efficiently searching.
 
-## Index
+### INDEX
 For fields whose value will be searched on WHERE clause directly, a b-tree index is good for that purpose:
 
 ```
@@ -98,3 +104,42 @@ CREATE INDEX index_rooms_on_regex_replace_lower_name ON public.rooms USING gin (
 ```
 
 This is to create a trigram index of rooms.name field, but only for pre-computed name field value with all the non-digit-non-alpha letters removed.
+
+## Advanced
+
+### Refresh materialized views
+
+```sql
+
+BEGIN;
+
+-- XXX Add DDLs here.
+CREATE OR REPLACE FUNCTION RefreshAllMaterializedViews(schema_arg TEXT DEFAULT 'public')
+RETURNS INT AS $$
+  DECLARE
+    r RECORD;
+  BEGIN
+    RAISE NOTICE 'Refreshing materialized view in schema %', schema_arg;
+    FOR r IN SELECT matviewname FROM pg_matviews WHERE schemaname = schema_arg
+    LOOP
+      RAISE NOTICE 'Refreshing %.%', schema_arg, r.matviewname;
+      EXECUTE 'REFRESH MATERIALIZED VIEW ' || schema_arg || '.' || r.matviewname;
+    END LOOP;
+
+    RETURN 1;
+  END
+$$ LANGUAGE plpgsql;
+
+COMMIT;
+```
+
+### Remove duplication based on table field
+
+    DELETE FROM dups a USING (
+      SELECT MIN(ctid) as ctid, key
+      FROM dups
+      GROUP BY key HAVING COUNT(*) > 1
+    ) b
+    WHERE a.key = b.key
+    AND a.ctid <> b.ctid
+

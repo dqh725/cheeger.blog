@@ -7,7 +7,11 @@ tags: android, adb
 comments: true
 ---
 
-# 1. adb usage
+- [Adb Usage](#adb-usage)
+- [Host access emulator](#local-machine-connect-to-emulator)
+- [Quick Fixes](#quick-fixes)
+
+# ADB usage
 ### Quick command line tool for adb
 
 - `adb devices`: list all connected devices
@@ -19,7 +23,7 @@ comments: true
 - `adb pull /system/priv-app/Launcher3`: to download file from android device to local machine
 - `adb push DIR_OF_LOCAL DIR_OF_ANDROID`: to upload local file to android device
 
-### Uninstall system app
+### Install/Uninstall system app
 if connected with cable
 ```bash
 adb root
@@ -38,7 +42,7 @@ rm -rf /system/priv-app/Launcher3/
 reboot
 ```
 
-# 2. Local machine connect to emulator
+# Local machine connect to emulator
 I have a web server hosted in an android emulator, and I would like to access it from my local machine;
 
 ```bash
@@ -63,13 +67,6 @@ redir add tcp:8080:8080
 ```
 then you can access the emulator via the host and the port
 
-# 3. Restart Logcat
-
-Sometimes android Logout will not working properly, showing nothing in the console, the most simple way to resolve this issue is to restart logcat(adb server);
-
-```
-adb kill-server && adb start-server
-```
 # 4. How to check android CPU is 32 or 64
 ```bash
 $ cat /proc/cpuinfo
@@ -93,7 +90,18 @@ Hardware : Amlogic
 Serial : adsf
 ```
 
-#5 quick fixes
+# Quick fixes
 
-cannot resolve my own classes
+## Q1
+### Cannot resolve all classes
+
 You can do "File" -> "Invalidate Caches...", and select "Invalidate and Restart" option to fix this.
+
+## Q2
+### Restart Logcat
+
+Sometimes android Logout will not working properly, showing nothing in the console, the most simple way to resolve this issue is to restart logcat(adb server);
+
+```
+adb kill-server && adb start-server
+```

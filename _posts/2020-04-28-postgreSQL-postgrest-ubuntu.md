@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PostgreSQL + PostgREST + ubuntu"
+title:  "Setup RESTful endpoints with PostgREST for ubuntu1804"
 lang: zh
 category: develop
 tags: "RESTful postgREST ubuntu"
@@ -16,10 +16,8 @@ comments: true
     sudo apt update
     sudo apt install postgresql postgresql-contrib
 
-### 2. 连接PG数据库
+### 2. 配置数据库用户
     sudo -u postgres psql
-
-### 3. 退出psql: `\q`
 
 默认安装的postgresql自带用户postgres，但是默认密码我不知道，改变密码比较方便
 
@@ -27,12 +25,12 @@ comments: true
     postgres=# ALTER ROLE postgres WITH PASSWORD 'password';
     postgres=# \q
 
-### 4. 创建数据库
+### 3. 创建数据库
     sudo -u postgres psql
-    postgres=# CREATE DATABASE DB;
+    postgres=# CREATE DATABASE dbname;
     postgres=# \q
 
-### 5. 允许远程通过IP地址连接postgresql服务，要做以下两步
+#### 允许远程通过IP地址连接postgresql服务，要做以下两步
 - a. 默认只监听localhost，要改成监听公网IP地址
 
       vim  /etc/postgresql/10/main/postgresql.conf
@@ -55,15 +53,15 @@ comments: true
 
       sudo service postgresql restart
 
-#### 5. 远程登陆测试
+- c. 远程登陆测试
 
-在本地电脑命令行里面运行：
+    在本地电脑命令行里面运行：
 
-    psql postgres://postgres:password@[SERVER_IP]
+        psql postgres://postgres:password@[SERVER_IP]
 
-默认端口5432，如果服务器不是这个端口需要制定，e.g.
+    默认端口5432，如果服务器不是这个端口需要制定，e.g.
 
-    psql postgres://postgres:password@45.45.45.45:5432
+        psql postgres://postgres:password@45.45.45.45:5432
 
 # 安装PostgREST
 
@@ -83,11 +81,11 @@ https://github.com/PostgREST/postgrest/releases  找到对应的版本下载连�
 
 在文件中输入基本的配置：
 
-    db-uri = "postgres://postgres:password@localhost/db"
+    db-uri = "postgres://postgres:password@localhost/db_name"
     db-schema = "public"
     db-anon-role = "postgres"
 
-制定一个数据库，这个例子中数据库是db。
+制定一个数据库，这个例子中数据库是db_name。
 
 指定schema, public是默认的
 
@@ -120,7 +118,7 @@ db-anon-role可以制定别的role，用于指定匿名访问的时候应该使�
     sudo systemctl start postgrest
 
 
-### 5. 通过nginx将postgREST服务挂到80端口
+# 通过nginx将postgREST服务挂到80端口
 
     sudo apt-get install nginx
     vim /etc/nginx/sites-available/default
@@ -173,7 +171,7 @@ db-anon-role可以制定别的role，用于指定匿名访问的时候应该使�
 
     sudo services nginx reload
 
-### 6. 配置swagger API页面
+## 配置swagger API页面
 添加swagger html页面
 
     vim /srv/www/html/index.html
