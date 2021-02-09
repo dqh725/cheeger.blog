@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="/assets/images/favicon.png" itemprop="image">
+		<title>Proposal</title>
+		<link rel="stylesheet" type="text/css" href="./play1.css" />
+		<script type="text/javascript" src="./fabric.min.js"></script>
+	</head>
+	<body>
+    <style>
+      button {
+        min-width: 80px;
+        height: 40px;
+        font-size: 18px;
+      }
+    </style>
+		<div class="container">
+			<header>
+				<nav class="codrops-demos">
+          <button id="yes">Yes&#128515;</button>
+          <button id="no">No&#128546;</button>
+				</nav>
+			</header>
+
+      <canvas id="c"/>
+      <img src="/assets/images/sources/proposal/hand1.svg" id="hand1" />
+      <img src="/assets/images/sources/proposal/ring1.svg" id="ring1" />
+
+    </div>
+
+		<script type="text/javascript">
+      var width = 600, height = 600;
+      var count = 0;
+      var ms = 2000;
+      var canvas, path;
+      var heart = 'M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z';
+      window.addEventListener('load', function() {
+        var yes = document.getElementById('yes');
+        var no = document.getElementById('no');
+        yes.addEventListener('click', function () {
+          alert('YES I DO');
+          move();
+        });
+        no.addEventListener('click', function () {
+          alert('You cannot say no!');
+          move();
+        });
+        function blink(ms) {
+          if (count < 50) {
+            setTimeout(function() {
+              rand = Math.random() * 600;
+              path.set('left', rand, { onChange: canvas.renderAll.bind(canvas) });
+              path.set('top', rand, { onChange: canvas.renderAll.bind(canvas) });
+              canvas.add(path);
+              count = count + 1;
+              blink(ms);
+            }, ms)
+          }
+        }
+        function move() {
+          hand.animate('angle', 230, {
+            onChange: canvas.renderAll.bind(canvas),
+            duration: 4000,
+          });
+          hand.animate('left', 300, {
+            onChange: canvas.renderAll.bind(canvas),
+            duration: 4000,
+          });
+          setTimeout(function () {
+            ring.animate('top', 245, {
+              onChange: canvas.renderAll.bind(canvas),
+              duration: 4000,
+            });
+            ring.animate('left', 225, {
+              onChange: canvas.renderAll.bind(canvas),
+              duration: 4000,
+            });
+            setTimeout(function () {
+              canvas.add(path);
+              blink(200);
+            }, 4000);
+          }, 3000);
+        };
+        canvas = new fabric.Canvas('c', {
+          left: 0,
+          top: 0,
+          width: 400,
+          height: 800
+        });
+
+        path = new fabric.Path(heart, {
+          left: 120,
+          top: 120,
+          fill: 'red'
+        });
+        path.scaleToWidth(30);
+        var handImageElement = document.getElementById('hand1');
+        var ringImageElement = document.getElementById('ring1');
+        var hand = new fabric.Image(handImageElement, {
+          left: 400,
+          top: 600,
+          angle: 180,
+          opacity: 0.85
+        });
+        hand.scaleToWidth(400);
+        var ring = new fabric.Image(ringImageElement, {
+          left: 50,
+          top: 220,
+          angle: 0,
+          skewY: -30,
+          opacity: 0.85
+        });
+        ring.scaleToWidth(30);
+        canvas.add(hand);
+        canvas.add(ring);
+      });
+		</script>
+  </body>
+</html>
