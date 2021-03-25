@@ -28,6 +28,8 @@ sass:
   sass_dir: assets/_sass
 
 exclude: [
+  "Gemfile",
+  "Gemfile.lock",
   "archive.tar.gz",
   "features",
   "node_modules",
