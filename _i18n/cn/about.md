@@ -24,14 +24,15 @@
 
 #### **关于我**
 
-1. 具有5年Ruby on Rails全栈开发经验, 熟悉rspec做TDD开发;
-1. 具有3年Ember和React开发经验
-2. 熟悉PostgreSQL, 数据库语言SQL, 部署工具sqitch, RESTful API工具PostGREST;
-3. 熟悉阿里云和AWS云服务功能;
-4. 具有多年物联开发经验, 了解Mqtt协议;
+1. 具有6年Ruby on Rails全栈开发经验, 熟悉rspec做TDD开发;
+1. 具有4年React/React Native开发经验
+2. 熟悉PostgreSQL, 数据库语言SQL, 部署工具sqitch, RESTful自动部署工具PostgREST;
+3. 熟悉阿里云和AWS云服务部署;
+4. 具有多年物联开发经验, 熟悉Mqtt/mosquitto;
 5. 熟悉linux系统(ubuntu), 脚本管理工具Ansible;
 6. 了解并具有内存缓存数据库使用经验，Redis;
-7. vim编辑器爱好者
+7. 最熟悉的编辑器VIM;
+8. 最近关注: docker
 
 `主要语言`
 
@@ -57,56 +58,56 @@ _2008.6 - 2012.6_ 工科学士, 材料科学与工程, *浙江大学*, 中国
 
 2020.02 - 至今 **兼职** [Coriolis Technology][coriolis-url], 英国伦敦
 
-简介: 全球贸易数据可视化开发
+简介: 全球贸易数据可视化开发, 项目案例：[ADB项目][adb-url]
 
-- 基于AWS云服务
-- PostgreSQL + PostGREST作为后端
-- React + d3做可视化前端开发
-- 每周20小时
+- 基于AWS/Azure云服务
+- PostgreSQL + PostGREST + Sqitch作为后端
+- React + d3js做可视化前端开发
 
-2019.12 - 2020.06 **外接项目** 合隆节能厨具有限公司节能厨具, 中国广州
+---
+<br>
+2019.01 - 至今 **创业**, [十体科技（杭州）有限公司][tenty-url], 中国杭州
 
-简介: 前端后端加客户端的全套系统, 两人小队，我负责协调项目合作以及和客户的需求讨论对接。
-
-- 基于阿里云服务
-- RoR RESTful API开发
-- React前端
-- React Native安卓端
-
-2019.1 - 至今 **自主创业**, [十体科技（杭州）有限公司][tenty-url], 中国杭州
-
-简介：简易管理数字告示系统
+简介：物联网系统，包括数字告示系统，自动售卖系统
 
 - 后台管理网站
 - redis后台函数
 - 物联网设备系统开发
 - 微信小程序开发
+- 自动售卖机系统开发, 项目案例: [口罩机][masker-url]
 
-_2017.9 - 至今_ **远程工作**, [Vivi International][vivi-url], 中国
+---
+<br>
+2019.12 - 2020.06 **外接项目** 合隆节能厨具有限公司, 中国广州
+
+简介: 设计并开发简易的网页管理平台搭配安卓平板APP的管理系统, 小规模开发团队，我作为项目负责人，主要负责
+
+- 协调项目合作, 对接客户的需求
+- 后台开发和部署
+- 安卓APP的开发和发布
+- Ruby-on-Rails(基于阿里云服务) +  React Native安卓端
+
+---
+<br>
+_2017.9 - 2020.02_ **远程工作**, [Vivi International][vivi-url], 中国
 
 - Ruby RESTFul API 开发
 - React改写前端
 
+---
+<br>
 _2016.6 - 2017.9_ **软件工程师**, [Vivi International][vivi-url], 墨尔本
 
-简介：侧重教学环境的无线展示系统，包括智能投屏。
+简介：侧重教学环境的无线展示系统，实现老师和学生之间投屏互动教学。
 
 - 基于node和AWS云端的图片处理微信匿名服务器
 - 开发和维护公司门户网站以及物联网管理网站
 - 集成第三方CRM， 包括Hubspot，ZOHO，XERO
 - 通过Electron，cordova跨平台APP开发
 - 基于socketio和websocket的物联网系统
-- 熟悉git，jira，s365，slack
+- 熟悉git，jira，o365，slack
 - 熟悉ELK日志系统的搭建和维护
 
-_2015.3 - 2016.3_ **网站开发工程师**, Romey(已停运), 墨尔本
-
-基于个人或者组织摄影出景需求的摄影师与模特在线预约系统
-- 开发和维护RoR后台管理网站
-- 集成SMS，邮箱，通知推送
-- 在线支付PayPal SDK / Stripe API
-
----
 ---
 <br>
 
@@ -121,3 +122,5 @@ LinkedIn账号 [alba-hoo][linkedIn]
 [vivi-url]:https://www.vivi.io
 [tenty-url]:https://tenty.co
 [coriolis-url]: https://coriolistechnologies.com
+[masker-url]: https://mp.weixin.qq.com/s/CJN00NApfIgQ4xrwgYhfpA
+[adb-url]: https://www.adb.org/multimedia/scf/#/
