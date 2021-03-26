@@ -4,7 +4,8 @@
   "description": "go to the `_posts/` add a post with name following",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && jekyll build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
-    "jquery": "^2.2.4",
+    "jquery": "^3.6.0",
     "simple-jekyll-search": "^1.7.0",
     "slick-carousel": "^1.8.1"
   },
