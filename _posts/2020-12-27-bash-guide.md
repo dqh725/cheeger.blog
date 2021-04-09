@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bash commands"
+title:  "Common syntax tips for writing base script"
 lang: en
 icon: B
 category: develop
