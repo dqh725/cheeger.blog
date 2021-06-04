@@ -9,9 +9,30 @@ comments: true
 
 - [Adb Usage](#adb-usage)
 - [Host access emulator](#local-machine-connect-to-emulator)
-- [Quick Fixes](#quick-fixes)
+- [FAQ](#faq)
 
 # ADB usage
+
+### Mimic text input to device
+- `adb shell input text "insert%syour%stext%shere"`: %s means SPACE
+
+### Mimic event to device
+- `adb shell input keyevent 82`: 82 is menu key, [complete code list](http://developer.android.com/reference/android/view/KeyEvent.html)
+
+### Tap X, Y position
+
+To find the exact X,Y position you want to Tap go to:
+
+Settings > Developer Options > Check the option POINTER SLOCATION
+
+- `adb shell input tap 500 1450`:
+
+## Swipe X1 Y1 X2 Y2 [duration(ms)]
+- `adb shell input swipe 100 500 100 1450 100`
+
+## Long Press
+- `adb shell input swipe 100 500 100 500 250`
+
 ### Quick command line tool for adb
 
 - `adb devices`: list all connected devices
@@ -22,6 +43,7 @@ comments: true
 - `adb uninstall com.example.box`: the package name can be found in android shell's `/data/app`, you will need `su` to grant the admin access
 - `adb pull /system/priv-app/Launcher3`: to download file from android device to local machine
 - `adb push DIR_OF_LOCAL DIR_OF_ANDROID`: to upload local file to android device
+
 
 ### Install/Uninstall system app
 if connected with cable
@@ -67,41 +89,41 @@ redir add tcp:8080:8080
 ```
 then you can access the emulator via the host and the port
 
-# 4. How to check android CPU is 32 or 64
-```bash
-$ cat /proc/cpuinfo
-```
 
-the result will looks like this:
-```
-Processor : AArch64 Processor rev 4 (aarch64)
-processor : 0
-processor : 1
-processor : 2
-processor : 3
-Features : fp asimd evtstrm aes pmull sha1 sha2 crc32
-CPU implementer : 0x41
-CPU architecture: AArch64
-CPU variant : 0x0
-CPU part : 0xd03
-CPU revision : 4
+# FAQ
 
-Hardware : Amlogic
-Serial : adsf
-```
-
-# Quick fixes
-
-## Q1
-### Cannot resolve all classes
+### 1. Cannot resolve all classes
 
 You can do "File" -> "Invalidate Caches...", and select "Invalidate and Restart" option to fix this.
 
-## Q2
-### Restart Logcat
+### 2. Restart Logcat
 
 Sometimes android Logout will not working properly, showing nothing in the console, the most simple way to resolve this issue is to restart logcat(adb server);
 
 ```
 adb kill-server && adb start-server
 ```
+
+### 3. could not find DSO to load: libreactnativejni.so
+
+References:
+- [Suggested fix](https://blog.csdn.net/lplj717/java/article/details/77370979)
+- [对Android中arm64-v8a、armeabi-v7a、armeabi、x86认识](https://blog.csdn.net/liangtianmeng/article/details/82879848)
+
+
+in app/build.gradle:
+
+    defaultConfig {
+      applicationId "com.example.lipiao.myreactnativeapp"
+      minSdkVersion 16
+      targetSdkVersion 25
+      versionCode 1
+      versionName "1.0"
+      ndk {
+        abiFilters "armeabi-v7a","x86"
+      }
+    }
+    packagingOptions {
+      exclude "lib/arm64-v8a/librealm-jni.so"
+    }
+

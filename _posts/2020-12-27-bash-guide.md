@@ -1,49 +1,121 @@
 ---
 layout: post
-title:  "Common syntax tips for writing base script"
+title:  "find/sed/bash-ish"
 lang: en
 icon: B
-category: develop
-tags: bash
+category: linux
+tags: bash, find, sed
 comments: true
 ---
+- [Kernal](#kernal)
+    - [linux](#linux)
+    - [android](#android)
+- [Find](#find)
+- [Sed](#sed)
+- [Bash](#bash-ish)
+    - [String operation](#string-operation)
+    - [Loop](#loop)
+    - [IF-ELSE](#if-else)
 
-# Introduction
-- [String operation](#string-operation)
-- [Loop](#loop)
-- [IF-ELSE](#if-else)
 
-# String Operation
+---
+<br/>
+# Kernal
 
-## () vs {}
+## Linux
+To find out what version of Linux (distro) you are running, try these 3 commands:
+
+    $ cat /etc/*-release
+    $ uname -a
+    $ cat /proc/version
+
+## Android
+### How to check android CPU is 32 or 64
+
+```bash
+$ cat /proc/cpuinfo
+```
+
+the result will looks like this:
+```
+Processor : AArch64 Processor rev 4 (aarch64)
+processor : 0
+processor : 1
+processor : 2
+processor : 3
+Features : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: AArch64
+CPU variant : 0x0
+CPU part : 0xd03
+CPU revision : 4
+
+Hardware : Amlogic
+Serial : adsf
+```
+
+---
+<br/>
+# Find
+```
+find . -type [f/d] -name prefix*suffix
+```
+
+Replace all file's extention from js to jsx if file is start with Capital letter
+
+```
+find . -type f -name "[[:upper:]]*.js" -exec sh -c 'mv "$1" "${1}x"' _ {} \;
+```
+
+---
+<br/>
+# Sed
+```
+sed -i '' 's/\(regex\)/\1, extra string/g' app/models/*.rb
+```
+node: `''` is needed for mac
+
+Find all rb files and replace all `FactoryGirl` to `FactoryBot`
+```
+$ find ./ -type f -name *.rb -exec sed -i '' 's/FactoryGirl/FactoryBot/g'
+```
+
+---
+<br/>
+
+# Bash-ish
+## String Operation
+
+### () vs {}
+
 (): Parentheses cause the commands to be run in a subshell.
-{}: Braces cause the commands to be grouped together but not in a subshell.
-${parameter/pattern/string}
 
-## With and without $
+{}: Braces cause the commands to be grouped together but not in a subshell.
+
+### With and without $
 
     #!/bin/bash
     var1="A B  C   D"
     echo $var1   # A B C D
     echo "$var1" # A B  C   D
 
-## String length
+### String length
 
     export stringZ=abcABC123ABCabc
     echo ${#stringZ}                 # 15
     echo `expr length $stringZ`      # 15
     echo `expr "$stringZ" : '.*'`    # 15
 
-## Substring
+### Substring
 
     export stringZ=abcABC123ABCabc
     echo ${stringZ:1}          # bcABC123ABCabc
     echo ${stringZ:7:3}        # 23A
                                # Three characters of substring.
 
-## Substring replacement
+### Substring replacement
 
-${parameter/pattern/string}
+`${parameter/pattern/string}`
 
 - Replace first match with `string`;
 - If pattern begins with '/', all matches of pattern are replaced with string
@@ -64,7 +136,7 @@ ${parameter/pattern/string}
       echo ${stringZ/%abc/XYZ}      # abcABC123ABCXYZ
                                     # Replaces back-end match of 'abc' with 'XYZ'.
 
-## Params with default:
+### Params with default:
 
     # ${parameter-default}, ${parameter:-default}
     # var is not declared
@@ -72,7 +144,7 @@ ${parameter/pattern/string}
     # var is declared, but null
     echo ${var:-'2'}  # 2
 
-## arithmetic expansion
+### arithmetic expansion
 
 The arithmetic expansion can be performed using the double parentheses ((...)) and $((...))
 
@@ -80,16 +152,16 @@ The arithmetic expansion can be performed using the double parentheses ((...)) a
     echo "$((i + 1))" # 2
 
 
-# Loop
+## Loop
 
-## Loop lines over a file
+### Loop lines over a file
 
     while IFS= read -r line; do
       echo "fetch daily kdata for $line"
       # extra command # python daily_kdata.py --code $line --start 1989-01-01 --end 2020-09-08
     done < filepath
 
-## Loop file over `find`
+### Loop file over `find`
 
 Find all filename contains `index.less`, and rename pattern `index.less` to `style.less`
 
@@ -109,11 +181,11 @@ Loop over folder for csv files:
       cat $filename
     done
 
-## Loop with different IP:
+### Loop with different IP:
 
     for i in {1..8}; do curl --header "X-Forwarded-For: 1.2.3.$i" [url]; done
 
-# IF-ELSE
+## IF-ELSE
 Syntax
 check `man test` to check all the possible test operation
 

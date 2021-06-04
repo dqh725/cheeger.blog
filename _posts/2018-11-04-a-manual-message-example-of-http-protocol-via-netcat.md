@@ -13,7 +13,7 @@ comments: true
 
 Development of HTTP was initiated by Tim Berners-Lee at CERN in 1989, and a later version HTTP/2 was standardized in 2015 and is now supported by major web[(wiki)][http-wiki-url].
 
-In my words, it is a set of message formats standard pre-defined for 2 parties(client-server). The lastest version is HTTP/2 which is released in 2015, but HTTP/1.1 is still the most widely supported one.
+In my words, **<span style="color: rgb(255, 76, 0);">it is a set of message format standards pre-defined for 2 parties</span>**. The lastest version is HTTP/2 which is released in 2015, but HTTP/1.1 is still the most widely supported one.
 
 In this article, I would start a client and a server by the tool **netcat** and passing message around them by following the HTTP/1.1, and hopefully shows you a rough idea about how HTTP protocol looks like in the real world.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup RESTful endpoints with PostgREST for ubuntu1804"
+title:  "Expose postgreSQL DB to endpoints (PostgREST + ubuntu1804)"
 lang: zh
 category: develop
 tags: "RESTful postgREST ubuntu"
